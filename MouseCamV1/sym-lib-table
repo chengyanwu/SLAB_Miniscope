@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name Intel_10M02SCU169C8G)(type Legacy)(uri "${KIPRJMOD}/Intel 10M02SCU169C8G.lib")(options "")(descr ""))
+  (lib (name DS90UB913ATRTVTQ1)(type Legacy)(uri ${KIPRJMOD}/DS90UB913ATRTVTQ1.lib)(options "")(descr ""))
+  (lib (name U.FL-R-SMT-110)(type Legacy)(uri ${KIPRJMOD}/U.FL-R-SMT-110.lib)(options "")(descr ""))
+  (lib (name TLV7103318DSER)(type Legacy)(uri ${KIPRJMOD}/TLV7103318DSER.lib)(options "")(descr ""))
+)
