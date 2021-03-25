@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name Serializer-rescue)(type Legacy)(uri ${KIPRJMOD}/Serializer-rescue.lib)(options "")(descr ""))
   (lib (name FPGA-rescue)(type Legacy)(uri ${KIPRJMOD}/FPGA-rescue.lib)(options "")(descr ""))
+  (lib (name Python480-rescue)(type Legacy)(uri ${KIPRJMOD}/Python480-rescue.lib)(options "")(descr ""))
 )
