@@ -1,3 +1,5 @@
 (fp_lib_table
   (lib (name MouseCamV1)(type KiCad)(uri /Users/ema/Box/Research/MouseCam/MouseCamV1)(options "")(descr ""))
+  (lib (name lib_sym)(type KiCad)(uri ${KIPRJMOD}/lib_sym.pretty)(options "")(descr ""))
+  (lib (name 10M50SCE144)(type KiCad)(uri ${KIPRJMOD}/lib_sym/10M50SCE144.pretty)(options "")(descr ""))
 )

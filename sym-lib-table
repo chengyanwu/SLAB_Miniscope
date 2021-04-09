@@ -2,4 +2,5 @@
   (lib (name Serializer-rescue)(type Legacy)(uri ${KIPRJMOD}/Serializer-rescue.lib)(options "")(descr ""))
   (lib (name FPGA-rescue)(type Legacy)(uri ${KIPRJMOD}/FPGA-rescue.lib)(options "")(descr ""))
   (lib (name Python480-rescue)(type Legacy)(uri ${KIPRJMOD}/Python480-rescue.lib)(options "")(descr ""))
+  (lib (name 10M50SCE)(type Legacy)(uri ${KIPRJMOD}/10M50SCE.lib)(options "")(descr ""))
 )
