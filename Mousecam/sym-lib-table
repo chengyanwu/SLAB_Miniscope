@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name 10M50SCE)(type Legacy)(uri /home/luyao/Projects/SLAB_Mousecam/10M50SCE.lib)(options "")(descr ""))
+  (lib (name Python480-rescue)(type Legacy)(uri /home/luyao/Projects/SLAB_Mousecam/Python480-rescue.lib)(options "")(descr ""))
+  (lib (name Serializer-rescue)(type Legacy)(uri /home/luyao/Projects/SLAB_Mousecam/Serializer-rescue.lib)(options "")(descr ""))
+)

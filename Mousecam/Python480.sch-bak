@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -274,26 +274,6 @@ Text HLabel 3950 4500 2    50   Output ~ 0
 FV
 Text HLabel 3950 4400 2    50   Output ~ 0
 PXL_CLK
-Text HLabel 3950 4200 2    50   Output ~ 0
-D9
-Text HLabel 3950 4100 2    50   Output ~ 0
-D8
-Text HLabel 3950 4000 2    50   Output ~ 0
-D7
-Text HLabel 3950 3900 2    50   Output ~ 0
-D6
-Text HLabel 3950 3800 2    50   Output ~ 0
-D5
-Text HLabel 3950 3700 2    50   Output ~ 0
-D4
-Text HLabel 3950 3600 2    50   Output ~ 0
-D3
-Text HLabel 3950 3500 2    50   Output ~ 0
-D2
-Text HLabel 3950 3400 2    50   Output ~ 0
-D1
-Text HLabel 3950 3300 2    50   Output ~ 0
-D0
 Text Label 3600 3300 0    50   ~ 0
 DOUT0
 Text Label 3600 3400 0    50   ~ 0
@@ -396,8 +376,6 @@ Text Label 6750 3550 0    50   ~ 0
 VREF_BOTPLATE
 Wire Notes Line
 	3100 3200 3100 4250
-Wire Notes Line
-	3100 4250 4550 4250
 Wire Notes Line
 	4550 4250 4550 3200
 Wire Notes Line
@@ -1052,4 +1030,26 @@ $EndComp
 Connection ~ 8450 3150
 Text Notes 8100 2600 0    100  ~ 0
 Isolate VDD_PIX
+Wire Notes Line
+	3100 4250 4550 4250
+Text HLabel 3950 4200 2    50   Output ~ 0
+D9
+Text HLabel 3950 4100 2    50   Output ~ 0
+D8
+Text HLabel 3950 4000 2    50   Output ~ 0
+D7
+Text HLabel 3950 3900 2    50   Output ~ 0
+D6
+Text HLabel 3950 3800 2    50   Output ~ 0
+D5
+Text HLabel 3950 3700 2    50   Output ~ 0
+D4
+Text HLabel 3950 3600 2    50   Output ~ 0
+D3
+Text HLabel 3950 3500 2    50   Output ~ 0
+D2
+Text HLabel 3950 3400 2    50   Output ~ 0
+D1
+Text HLabel 3950 3300 2    50   Output ~ 0
+D0
 $EndSCHEMATC
