@@ -1,0 +1,63 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 10M50SCE:10M50SCE144C8G U1
+U 4 1 607B5417
+P 1750 2200
+F 0 "U1" H 1442 2665 50  0000 C CNN
+F 1 "10M50SCE144C8G" H 1442 2574 50  0000 C CNN
+F 2 "10M50SCE144:QFP50P2200X2200X165-145N" H 1750 2200 50  0001 C CNN
+F 3 "" H 1750 2200 50  0001 C CNN
+	4    1750 2200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2000 2900 2000
+Wire Wire Line
+	2450 2100 2900 2100
+Wire Wire Line
+	2450 2200 2900 2200
+Wire Wire Line
+	2450 2300 2900 2300
+Wire Wire Line
+	2450 2400 2900 2400
+Wire Wire Line
+	2450 2500 2900 2500
+Wire Wire Line
+	2450 2600 2900 2600
+Wire Wire Line
+	2450 2700 2900 2700
+Wire Wire Line
+	2450 2800 2900 2800
+Text Label 2550 2000 0    50   ~ 0
+DOUT1
+Text Label 2550 2100 0    50   ~ 0
+DOU2
+Text Label 2550 2200 0    50   ~ 0
+DOUT3
+Text Label 2550 2300 0    50   ~ 0
+DOUT4
+Text Label 2550 2400 0    50   ~ 0
+DOUT5
+Text Label 2550 2500 0    50   ~ 0
+DOUT6
+Text Label 2550 2600 0    50   ~ 0
+DOUT7
+Text Label 2550 2700 0    50   ~ 0
+DOUT8
+Text Label 2550 2800 0    50   ~ 0
+DOUT9
+$EndSCHEMATC
