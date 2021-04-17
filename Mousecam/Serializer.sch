@@ -38,7 +38,7 @@ Wire Wire Line
 Text Label -4050 4600 3    50   ~ 0
 VDDD
 $Comp
-L Serializer-rescue:GRM033R61A104ME15D-Capacitor C2
+L Serializer-rescue:GRM033R61A104ME15D-Capacitor C?
 U 1 1 5FF39341
 P 7350 3300
 F 0 "C?" H 7258 3254 50  0000 R CNN
@@ -54,7 +54,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 3450 7850 3450
 $Comp
-L Serializer-rescue:GRM033R61A104ME15D-Capacitor C5
+L Serializer-rescue:GRM033R61A104ME15D-Capacitor C?
 U 1 1 5FF5EBAF
 P 7350 4000
 F 0 "C?" H 7258 3954 50  0000 R CNN
@@ -67,7 +67,7 @@ $EndComp
 Wire Wire Line
 	7850 3450 7850 3400
 $Comp
-L power:GND #PWR02
+L power:GND #PWR?
 U 1 1 5FF64AA6
 P 7350 4200
 F 0 "#PWR?" H 7350 3950 50  0001 C CNN
@@ -87,7 +87,7 @@ Connection ~ 7350 4150
 Wire Wire Line
 	7350 4150 7350 4100
 $Comp
-L power:+1V8 #PWR05
+L power:+1V8 #PWR?
 U 1 1 5FF697ED
 P 7850 3050
 F 0 "#PWR?" H 7850 2900 50  0001 C CNN
@@ -98,7 +98,7 @@ F 3 "" H 7850 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+1V8 #PWR04
+L power:+1V8 #PWR?
 U 1 1 5FF6A0B9
 P 7850 3750
 F 0 "#PWR?" H 7850 3600 50  0001 C CNN
@@ -113,7 +113,7 @@ Wire Wire Line
 Text Label -2500 6400 2    50   ~ 0
 MODE
 $Comp
-L Device:C_Small C4
+L Device:C_Small C?
 U 1 1 5FF87FC9
 P 6850 1900
 F 0 "C?" H 6758 1854 50  0000 R CNN
@@ -140,7 +140,7 @@ Wire Wire Line
 	7350 2050 7850 2050
 Connection ~ 7350 2050
 $Comp
-L power:GND #PWR03
+L power:GND #PWR?
 U 1 1 5FF8D880
 P 7350 2150
 F 0 "#PWR?" H 7350 1900 50  0001 C CNN
@@ -158,7 +158,7 @@ Connection ~ 6850 1750
 Text Label 6450 1750 0    50   ~ 0
 VDDPLL
 $Comp
-L Device:L_Small L1
+L Device:L_Small L?
 U 1 1 5FF90959
 P 8150 1750
 F 0 "L?" V 8335 1750 50  0000 C CNN
@@ -169,7 +169,7 @@ F 3 "~" H 8150 1750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+1V8 #PWR06
+L power:+1V8 #PWR?
 U 1 1 5FF94686
 P 8350 1700
 F 0 "#PWR?" H 8350 1550 50  0001 C CNN
@@ -212,7 +212,7 @@ Connection ~ 7350 3850
 Wire Wire Line
 	7350 3850 7850 3850
 $Comp
-L Serializer-rescue:GRM033R61A104ME15D-Capacitor C8
+L Serializer-rescue:GRM033R61A104ME15D-Capacitor C?
 U 1 1 600743E5
 P 7350 1900
 F 0 "C?" H 7258 1854 50  0000 R CNN
@@ -223,7 +223,7 @@ F 3 "~" H 7350 1900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM155R60J106ME15D-Capacitor C12
+L Serializer-rescue:GRM155R60J106ME15D-Capacitor C?
 U 1 1 60074F7D
 P 6850 2600
 F 0 "C?" H 6758 2554 50  0000 R CNN
@@ -234,7 +234,7 @@ F 3 "~" H 6850 2600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM033R61A104ME15D-Capacitor C13
+L Serializer-rescue:GRM033R61A104ME15D-Capacitor C?
 U 1 1 60075DB5
 P 7350 2600
 F 0 "C?" H 7258 2554 50  0000 R CNN
@@ -245,7 +245,7 @@ F 3 "~" H 7350 2600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:L_Small L2
+L Device:L_Small L?
 U 1 1 6008139F
 P 8150 2450
 F 0 "L?" V 8335 2450 50  0000 C CNN
@@ -274,7 +274,7 @@ Wire Wire Line
 Wire Wire Line
 	8350 2450 8350 2350
 $Comp
-L power:+1V8 #PWR010
+L power:+1V8 #PWR?
 U 1 1 6008C0C3
 P 8350 2350
 F 0 "#PWR?" H 8350 2200 50  0001 C CNN
@@ -303,7 +303,7 @@ Connection ~ 6850 2450
 Text Label 6450 2450 0    50   ~ 0
 VDDCML
 $Comp
-L Serializer-rescue:GRM033R71A103KA01D-Capacitor C10
+L Serializer-rescue:GRM033R71A103KA01D-Capacitor C?
 U 1 1 60071224
 P 7850 1300
 F 0 "C?" H 7758 1254 50  0000 R CNN
@@ -314,7 +314,7 @@ F 3 "~" H 7850 1300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM033R61A104ME15D-Capacitor C6
+L Serializer-rescue:GRM033R61A104ME15D-Capacitor C?
 U 1 1 6006E176
 P 7350 1300
 F 0 "C?" H 7258 1254 50  0000 R CNN
@@ -330,7 +330,7 @@ Connection ~ 7850 1150
 Wire Wire Line
 	7850 1050 7850 1150
 $Comp
-L power:+1V8 #PWR08
+L power:+1V8 #PWR?
 U 1 1 6004EB41
 P 7850 1050
 F 0 "#PWR?" H 7850 900 50  0001 C CNN
@@ -355,7 +355,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 1200 6850 1150
 $Comp
-L power:GND #PWR07
+L power:GND #PWR?
 U 1 1 600314E0
 P 7350 1500
 F 0 "#PWR?" H 7350 1250 50  0001 C CNN
@@ -366,7 +366,7 @@ F 3 "" H 7350 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C9
+L Device:C_Small C?
 U 1 1 6002E3A6
 P 6850 1300
 F 0 "C?" H 6758 1254 50  0000 R CNN
@@ -381,7 +381,7 @@ Wire Wire Line
 Wire Wire Line
 	-2000 5400 -2050 5400
 $Comp
-L power:GND #PWR011
+L power:GND #PWR?
 U 1 1 6015939C
 P -1650 5400
 F 0 "#PWR?" H -1650 5150 50  0001 C CNN
@@ -392,7 +392,7 @@ F 3 "" H -1650 5400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R1
+L Device:R R?
 U 1 1 601443DA
 P -1850 5400
 F 0 "R?" V -2057 5400 50  0000 C CNN
@@ -423,7 +423,7 @@ Wire Notes Line
 Wire Notes Line
 	5050 4700 5050 7550
 $Comp
-L Device:L_Small L3
+L Device:L_Small L?
 U 1 1 602E3CB4
 P 3100 5300
 F 0 "L?" V 3285 5300 50  0000 C CNN
@@ -434,7 +434,7 @@ F 3 "~" H 3100 5300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:L_Small L4
+L Device:L_Small L?
 U 1 1 602E56BF
 P 3550 5300
 F 0 "L?" V 3735 5300 50  0000 C CNN
@@ -445,7 +445,7 @@ F 3 "~" H 3550 5300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small_US R2
+L Device:R_Small_US R?
 U 1 1 602E686F
 P 3550 5600
 F 0 "R?" V 3345 5600 50  0000 C CNN
@@ -478,7 +478,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 5600 4550 5550
 $Comp
-L power:GND #PWR014
+L power:GND #PWR?
 U 1 1 602FE443
 P 4550 5600
 F 0 "#PWR?" H 4550 5350 50  0001 C CNN
@@ -490,7 +490,7 @@ F 3 "" H 4550 5600 50  0001 C CNN
 $EndComp
 Connection ~ 4550 5600
 $Comp
-L power:+5V #PWR013
+L power:+5V #PWR?
 U 1 1 603454ED
 P 4550 5300
 F 0 "#PWR?" H 4550 5150 50  0001 C CNN
@@ -526,7 +526,7 @@ Connection ~ 2250 6650
 Wire Wire Line
 	2250 6650 2250 6750
 $Comp
-L power:+5V #PWR015
+L power:+5V #PWR?
 U 1 1 603C4B63
 P 1800 6650
 F 0 "#PWR?" H 1800 6500 50  0001 C CNN
@@ -537,7 +537,7 @@ F 3 "" H 1800 6650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C_Small C18
+L Device:C_Small C?
 U 1 1 603CA409
 P 1950 6950
 F 0 "C?" H 2042 6996 50  0000 L CNN
@@ -548,7 +548,7 @@ F 3 "~" H 1950 6950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR021
+L power:GND #PWR?
 U 1 1 60516C41
 P 2350 7300
 F 0 "#PWR?" H 2350 7050 50  0001 C CNN
@@ -568,7 +568,7 @@ Wire Wire Line
 	1800 6650 1950 6650
 Connection ~ 1950 6650
 $Comp
-L Device:R_Small R3
+L Device:R_Small R?
 U 1 1 5FF312E4
 P 5600 1700
 F 0 "R?" H 5659 1746 50  0000 L CNN
@@ -579,7 +579,7 @@ F 3 "~" H 5600 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+1V8 #PWR016
+L power:+1V8 #PWR?
 U 1 1 5FF32F4D
 P 5600 1500
 F 0 "#PWR?" H 5600 1350 50  0001 C CNN
@@ -590,7 +590,7 @@ F 3 "" H 5600 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR022
+L power:GND #PWR?
 U 1 1 5FF34524
 P 5600 2300
 F 0 "#PWR?" H 5600 2050 50  0001 C CNN
@@ -610,7 +610,7 @@ Connection ~ 5600 1900
 Wire Wire Line
 	5600 1900 5600 1800
 $Comp
-L Device:C_Small C21
+L Device:C_Small C?
 U 1 1 5FF4CA15
 P 5600 3550
 F 0 "C?" H 5692 3596 50  0000 L CNN
@@ -623,7 +623,7 @@ $EndComp
 Wire Wire Line
 	5600 3450 5600 3350
 $Comp
-L power:GND #PWR024
+L power:GND #PWR?
 U 1 1 5FF5387B
 P 5600 3750
 F 0 "#PWR?" H 5600 3500 50  0001 C CNN
@@ -636,7 +636,7 @@ $EndComp
 Wire Wire Line
 	5600 3750 5600 3650
 $Comp
-L power:+1V8 #PWR023
+L power:+1V8 #PWR?
 U 1 1 5FF5DCD7
 P 5600 2950
 F 0 "#PWR?" H 5600 2800 50  0001 C CNN
@@ -674,7 +674,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 6550 4550 6550
 $Comp
-L power:+3.3V #PWR018
+L power:+3.3V #PWR?
 U 1 1 60405E6D
 P 4650 6550
 F 0 "#PWR?" H 4650 6400 50  0001 C CNN
@@ -685,7 +685,7 @@ F 3 "" H 4650 6550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+1V8 #PWR017
+L power:+1V8 #PWR?
 U 1 1 603E3341
 P 3900 6650
 F 0 "#PWR?" H 3900 6500 50  0001 C CNN
@@ -696,7 +696,7 @@ F 3 "" H 3900 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR020
+L power:GND #PWR?
 U 1 1 603F74F6
 P 4550 7050
 F 0 "#PWR?" H 4550 6800 50  0001 C CNN
@@ -707,7 +707,7 @@ F 3 "" H 4550 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C20
+L Device:C_Small C?
 U 1 1 603F7011
 P 4550 6850
 F 0 "C?" H 4642 6896 50  0000 L CNN
@@ -718,7 +718,7 @@ F 3 "~" H 4550 6850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR019
+L power:GND #PWR?
 U 1 1 603E2D15
 P 3750 7050
 F 0 "#PWR?" H 3750 6800 50  0001 C CNN
@@ -729,7 +729,7 @@ F 3 "" H 3750 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C19
+L Device:C_Small C?
 U 1 1 603D8DB0
 P 3750 6850
 F 0 "C?" H 3842 6896 50  0000 L CNN
@@ -747,7 +747,7 @@ Connection ~ 3750 6650
 Wire Wire Line
 	3750 6650 3900 6650
 $Comp
-L Serializer-rescue:DS90UB933-Q1-SERDES U1
+L Serializer-rescue:DS90UB933-Q1-SERDES U?
 U 1 1 5FF0C6FA
 P -4150 5500
 F 0 "U?" H -4100 4950 60  0000 C CNN
@@ -766,7 +766,7 @@ Wire Wire Line
 Wire Wire Line
 	5600 3050 5600 2950
 $Comp
-L power:GND #PWR025
+L power:GND #PWR?
 U 1 1 60250FCD
 P -2800 7550
 F 0 "#PWR?" H -2800 7300 50  0001 C CNN
@@ -779,7 +779,7 @@ $EndComp
 Wire Wire Line
 	-2800 6500 -2500 6500
 $Comp
-L power:GND #PWR026
+L power:GND #PWR?
 U 1 1 6025B9D6
 P -2500 6500
 F 0 "#PWR?" H -2500 6250 50  0001 C CNN
@@ -794,7 +794,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 3550 7350 3450
 $Comp
-L power:GND #PWR01
+L power:GND #PWR?
 U 1 1 5FF3BD35
 P 7350 3550
 F 0 "#PWR?" H 7350 3300 50  0001 C CNN
@@ -805,7 +805,7 @@ F 3 "" H 7350 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0101
+L power:GND #PWR?
 U 1 1 6038339E
 P 7350 2850
 F 0 "#PWR?" H 7350 2600 50  0001 C CNN
@@ -838,7 +838,7 @@ Wire Wire Line
 Wire Wire Line
 	7850 1450 7850 1400
 $Comp
-L Connector_Generic:Conn_01x01 J_coax_gnd1
+L Connector_Generic:Conn_01x01 J_coax_gnd?
 U 1 1 6040543E
 P 1100 5300
 F 0 "J_coax_gnd?" V 1300 5250 50  0000 L CNN
@@ -849,7 +849,7 @@ F 3 "~" H 1100 5300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR09
+L power:GND #PWR?
 U 1 1 60407505
 P 1100 5600
 F 0 "#PWR?" H 1100 5350 50  0001 C CNN
@@ -860,7 +860,7 @@ F 3 "" H 1100 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L power:GND #PWR?
 U 1 1 60411FA3
 P 2250 5600
 F 0 "#PWR?" H 2250 5350 50  0001 C CNN
@@ -873,7 +873,7 @@ $EndComp
 Wire Wire Line
 	1100 5600 1100 5500
 $Comp
-L Device:R_Small R4
+L Device:R_Small R?
 U 1 1 6046BCC8
 P 5600 2100
 F 0 "R?" H 5659 2146 50  0000 L CNN
@@ -884,7 +884,7 @@ F 3 "~" H 5600 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R5
+L Device:R_Small R?
 U 1 1 6046D2B3
 P 5600 3150
 F 0 "R?" H 5659 3196 50  0000 L CNN
@@ -899,7 +899,7 @@ Wire Wire Line
 Wire Wire Line
 	-2450 5250 -2450 5400
 $Comp
-L Device:C C1
+L Device:C C?
 U 1 1 6047D677
 P -2200 5400
 F 0 "C?" V -2452 5400 50  0000 C CNN
@@ -920,7 +920,7 @@ DOUT_P
 Wire Wire Line
 	-2150 5000 -1850 5000
 $Comp
-L Serializer-rescue:GRM033R61A104ME15D-Capacitor C15
+L Serializer-rescue:GRM033R61A104ME15D-Capacitor C?
 U 1 1 6012F7F8
 P -2250 5000
 F 0 "C?" V -2500 5000 50  0000 C CNN
@@ -931,7 +931,7 @@ F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15
 	0    1    1    0   
 $EndComp
 $Comp
-L Serializer-rescue:GRM033R71A103KA01D-Capacitor C3
+L Serializer-rescue:GRM033R71A103KA01D-Capacitor C?
 U 1 1 5FF73F4B
 P 7850 1900
 F 0 "C?" H 7758 1854 50  0000 R CNN
@@ -942,7 +942,7 @@ F 3 "~" H 7850 1900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM033R71A103KA01D-Capacitor C7
+L Serializer-rescue:GRM033R71A103KA01D-Capacitor C?
 U 1 1 5FF745CE
 P 7850 2600
 F 0 "C?" H 7758 2554 50  0000 R CNN
@@ -953,7 +953,7 @@ F 3 "~" H 7850 2600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM033R71A103KA01D-Capacitor C11
+L Serializer-rescue:GRM033R71A103KA01D-Capacitor C?
 U 1 1 5FF74D09
 P 7850 3300
 F 0 "C?" H 7758 3254 50  0000 R CNN
@@ -964,7 +964,7 @@ F 3 "~" H 7850 3300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM033R71A103KA01D-Capacitor C14
+L Serializer-rescue:GRM033R71A103KA01D-Capacitor C?
 U 1 1 5FF753D1
 P 7850 4000
 F 0 "C?" H 7758 3954 50  0000 R CNN
@@ -975,7 +975,7 @@ F 3 "~" H 7850 4000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM155R60J106ME15D-Capacitor C16
+L Serializer-rescue:GRM155R60J106ME15D-Capacitor C?
 U 1 1 5FF90C32
 P 4100 5450
 F 0 "C?" H 3850 5400 50  0000 L CNN
@@ -986,7 +986,7 @@ F 3 "" H 4100 5450 50  0001 L BNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Serializer-rescue:GRM155R60J106ME15D-Capacitor C17
+L Serializer-rescue:GRM155R60J106ME15D-Capacitor C?
 U 1 1 5FF9192E
 P 4550 5450
 F 0 "C?" H 4700 5500 50  0000 L CNN
@@ -997,7 +997,7 @@ F 3 "" H 4550 5450 50  0001 L BNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Serializer-rescue:TLV7103318DSER-TLV7103318DSER U2
+L Serializer-rescue:TLV7103318DSER-TLV7103318DSER U?
 U 1 1 603AD9B0
 P 2300 6550
 F 0 "U?" H 2950 6900 60  0000 C CNN
@@ -1018,7 +1018,7 @@ Wire Notes Line
 Text Notes 5600 4850 0    80   ~ 0
 Breakout pads\n
 $Comp
-L Serializer-rescue:U_FL-R-SMT_10_-dk_Coaxial-Connectors-RF J1
+L Serializer-rescue:U_FL-R-SMT_10_-dk_Coaxial-Connectors-RF J?
 U 1 1 5FFDACBE
 P 2250 5300
 F 0 "J?" H 2250 5500 60  0000 C CNN
@@ -1029,7 +1029,7 @@ F 3 "" H 2250 5300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0102
+L power:GND #PWR?
 U 1 1 60016AE8
 P 6100 5450
 F 0 "#PWR?" H 6100 5200 50  0001 C CNN
@@ -1042,7 +1042,7 @@ $EndComp
 Wire Wire Line
 	6100 5450 5900 5450
 $Comp
-L power:+5V #PWR0103
+L power:+5V #PWR?
 U 1 1 6001D50C
 P 6100 5550
 F 0 "#PWR?" H 6100 5400 50  0001 C CNN
@@ -1143,7 +1143,7 @@ D10
 Text HLabel 6100 5350 2    39   Input ~ 0
 D11
 $Comp
-L Device:R_Small_US R6
+L Device:R_Small_US R?
 U 1 1 601021F6
 P 3050 5600
 F 0 "R?" V 2845 5600 50  0000 C CNN
@@ -1164,7 +1164,7 @@ Connection ~ 2800 5300
 Wire Wire Line
 	2800 5300 3000 5300
 $Comp
-L Connector_Generic:Conn_01x05 J2
+L Connector_Generic:Conn_01x05 J?
 U 1 1 5FFF727F
 P 5700 5450
 F 0 "J?" H 5700 5850 50  0000 C CNN

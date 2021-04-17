@@ -254,4 +254,20 @@ Text HLabel 9300 3500 0    50   Input ~ 0
 VCCIO8
 Wire Wire Line
 	9400 3500 9300 3500
+Wire Wire Line
+	4500 2650 4200 2650
+Wire Wire Line
+	4500 2750 4200 2750
+Wire Wire Line
+	4500 2850 4200 2850
+Wire Wire Line
+	4500 2950 4200 2950
+Text HLabel 4200 2650 0    50   Input ~ 0
+SCK
+Text HLabel 4200 2750 0    50   Input ~ 0
+MOSI
+Text HLabel 4200 2850 0    50   Input ~ 0
+MISO
+Text HLabel 4200 2950 0    50   Input ~ 0
+SS_N
 $EndSCHEMATC
