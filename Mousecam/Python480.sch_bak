@@ -1052,4 +1052,18 @@ Text HLabel 3950 3400 2    50   Output ~ 0
 D1
 Text HLabel 3950 3300 2    50   Output ~ 0
 D0
+NoConn ~ 3550 3000
+NoConn ~ 3550 3100
+NoConn ~ 3550 2200
+NoConn ~ 3550 2300
+NoConn ~ 3550 2500
+NoConn ~ 3550 2600
+NoConn ~ 3550 2750
+NoConn ~ 3550 2850
+NoConn ~ 1500 3850
+NoConn ~ 1500 3750
+NoConn ~ 1500 3650
+NoConn ~ 1500 3950
+NoConn ~ 1500 4050
+NoConn ~ 1500 4150
 $EndSCHEMATC

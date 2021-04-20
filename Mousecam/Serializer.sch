@@ -414,14 +414,6 @@ Text Notes -2700 5950 0    59   ~ 0
 Leave open if not in use\nSee page 4 of \nds90ub913a-q1.pdf \n
 Text Notes 700  5050 0    98   ~ 0
 Power over coax \n\n
-Wire Notes Line
-	650  4700 5050 4700
-Wire Notes Line
-	650  7550 5050 7550
-Wire Notes Line
-	650  4700 650  7550
-Wire Notes Line
-	5050 4700 5050 7550
 $Comp
 L Device:L_Small L?
 U 1 1 602E3CB4
@@ -501,8 +493,6 @@ F 3 "" H 4550 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 4550 5300
-Wire Notes Line
-	5050 5950 600  5950
 Connection ~ 4100 5300
 Wire Wire Line
 	3800 5300 3800 5600
@@ -1207,161 +1197,12 @@ Wire Wire Line
 	4400 1610 4720 1610
 Text Label 4720 1610 2    39   ~ 0
 DOUT_P
-$Comp
-L Serializer-rescue:TLV7103318DSER-TLV7103318DSER U?
-U 1 1 603AD9B0
-P 2300 6550
-F 0 "U?" H 2950 6900 60  0000 C CNN
-F 1 "TLV7103318DSER" H 3000 6800 60  0000 C CNN
-F 2 "DSE6" H 3400 6790 60  0001 C CNN
-F 3 "" H 2300 6550 60  0000 C CNN
-	1    2300 6550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3750 6650 3900 6650
-Wire Wire Line
-	3750 6750 3750 6650
-Connection ~ 3750 6650
-Wire Wire Line
-	3600 6650 3750 6650
-$Comp
-L Device:C_Small C?
-U 1 1 603D8DB0
-P 3750 6850
-F 0 "C?" H 3842 6896 50  0000 L CNN
-F 1 "1uF" H 3842 6805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0201_0603Metric" H 3750 6850 50  0001 C CNN
-F 3 "~" H 3750 6850 50  0001 C CNN
-	1    3750 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 603E2D15
-P 3750 7050
-F 0 "#PWR?" H 3750 6800 50  0001 C CNN
-F 1 "GND" H 3755 6877 50  0000 C CNN
-F 2 "" H 3750 7050 50  0001 C CNN
-F 3 "" H 3750 7050 50  0001 C CNN
-	1    3750 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 603F7011
-P 4550 6850
-F 0 "C?" H 4642 6896 50  0000 L CNN
-F 1 "1uF" H 4642 6805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0201_0603Metric" H 4550 6850 50  0001 C CNN
-F 3 "~" H 4550 6850 50  0001 C CNN
-	1    4550 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 603F74F6
-P 4550 7050
-F 0 "#PWR?" H 4550 6800 50  0001 C CNN
-F 1 "GND" H 4555 6877 50  0000 C CNN
-F 2 "" H 4550 7050 50  0001 C CNN
-F 3 "" H 4550 7050 50  0001 C CNN
-	1    4550 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR?
-U 1 1 603E3341
-P 3900 6650
-F 0 "#PWR?" H 3900 6500 50  0001 C CNN
-F 1 "+1V8" V 3915 6778 50  0000 L CNN
-F 2 "" H 3900 6650 50  0001 C CNN
-F 3 "" H 3900 6650 50  0001 C CNN
-	1    3900 6650
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 60405E6D
-P 4650 6550
-F 0 "#PWR?" H 4650 6400 50  0001 C CNN
-F 1 "+3.3V" V 4665 6678 50  0000 L CNN
-F 2 "" H 4650 6550 50  0001 C CNN
-F 3 "" H 4650 6550 50  0001 C CNN
-	1    4650 6550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3600 6550 4550 6550
-Wire Wire Line
-	4550 6550 4550 6750
-Connection ~ 4550 6550
-Wire Wire Line
-	4550 6550 4650 6550
-Wire Wire Line
-	3750 7050 3750 6950
-Wire Wire Line
-	4550 7050 4550 6950
-Wire Wire Line
-	2950 7250 2950 7300
-Wire Wire Line
-	1800 6650 1950 6650
-Wire Wire Line
-	1950 6650 2250 6650
-Connection ~ 1950 6650
-Wire Wire Line
-	1950 6850 1950 6650
-Wire Wire Line
-	1950 7300 1950 7050
-Wire Wire Line
-	2950 7300 2350 7300
-Wire Wire Line
-	1950 7300 2350 7300
-Connection ~ 2350 7300
-$Comp
-L power:GND #PWR?
-U 1 1 60516C41
-P 2350 7300
-F 0 "#PWR?" H 2350 7050 50  0001 C CNN
-F 1 "GND" H 2355 7127 50  0000 C CNN
-F 2 "" H 2350 7300 50  0001 C CNN
-F 3 "" H 2350 7300 50  0001 C CNN
-	1    2350 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 603CA409
-P 1950 6950
-F 0 "C?" H 2042 6996 50  0000 L CNN
-F 1 "1uF" H 2042 6905 50  0000 L CNN
-F 2 "" H 1950 6950 50  0001 C CNN
-F 3 "~" H 1950 6950 50  0001 C CNN
-	1    1950 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 603C4B63
-P 1800 6650
-F 0 "#PWR?" H 1800 6500 50  0001 C CNN
-F 1 "+5V" V 1815 6778 50  0000 L CNN
-F 2 "" H 1800 6650 50  0001 C CNN
-F 3 "" H 1800 6650 50  0001 C CNN
-	1    1800 6650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2250 6650 2250 6750
-Connection ~ 2250 6650
-Wire Wire Line
-	2300 6650 2250 6650
-Wire Wire Line
-	2250 6750 2300 6750
-Wire Wire Line
-	2250 6550 2250 6650
-Wire Wire Line
-	2250 6550 2300 6550
-Text Notes 650  6300 0    98   ~ 0
-Low-dropout (LDO)\nLinear Voltage Regulator\n
+Wire Notes Line
+	600  4650 4950 4650
+Wire Notes Line
+	4950 4650 4950 5900
+Wire Notes Line
+	4950 5900 600  5900
+Wire Notes Line
+	600  5900 600  4650
 $EndSCHEMATC
