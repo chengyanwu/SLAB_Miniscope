@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Apr 19 08:56:03 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ov7725_uart
+Top-level Entity Name : ov7725_uart
+Family : MAX 10
+Total logic elements : 980
+    Total combinational functions : 811
+    Dedicated logic registers : 510
+Total registers : 510
+Total pins : 57
+Total virtual pins : 0
+Total memory bits : 32,768
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0
