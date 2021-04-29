@@ -13,52 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Python480-rescue:NOIP1SN0480A-Image_Sensor U1
-U 1 1 602C5332
-P 2450 3400
-F 0 "U1" H 2450 3750 50  0000 C CNN
-F 1 "NOIP1SN0480A" H 3700 5350 50  0000 C CNN
-F 2 ".Package_BGA:BGA88CP50_8X11_493X613X75B25" H 2350 5800 50  0001 C CNN
-F 3 "https://www.onsemi.com/pub/Collateral/NOIP1SN0480A-D.PDF" H 2200 5450 50  0001 C CNN
-	1    2450 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 5650 2000 5650
-Connection ~ 2000 5650
-Wire Wire Line
-	2000 5650 2100 5650
-Connection ~ 2100 5650
-Wire Wire Line
-	2100 5650 2250 5650
-Connection ~ 2250 5650
-Wire Wire Line
-	2250 5650 2350 5650
-Connection ~ 2350 5650
-Wire Wire Line
-	2350 5650 2450 5650
-Connection ~ 2450 5650
-Wire Wire Line
-	2450 5650 2550 5650
-Connection ~ 2550 5650
-Wire Wire Line
-	2550 5650 2700 5650
-Connection ~ 2700 5650
-Wire Wire Line
-	2700 5650 2800 5650
-Connection ~ 2800 5650
-Wire Wire Line
-	2800 5650 2900 5650
-Connection ~ 2900 5650
-Wire Wire Line
-	2900 5650 3000 5650
-Connection ~ 3000 5650
-Wire Wire Line
-	3000 5650 3100 5650
 Wire Wire Line
 	3100 5650 3100 5700
-Connection ~ 3100 5650
 $Comp
 L power:GND #PWR05
 U 1 1 602CCF8E
@@ -70,25 +26,15 @@ F 3 "" H 3100 5700 50  0001 C CNN
 	1    3100 5700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1500 4800 1150 4800
 Text Label 1150 4800 0    50   ~ 0
 CLK_PLL
 Wire Wire Line
-	1500 4700 1000 4700
-Wire Wire Line
 	1000 4700 1000 4600
 Wire Wire Line
-	1000 4600 1500 4600
-Wire Wire Line
 	1000 4600 1000 4500
-Wire Wire Line
-	1000 4500 1500 4500
 Connection ~ 1000 4600
 Wire Wire Line
 	1000 4500 1000 4400
-Wire Wire Line
-	1000 4400 1500 4400
 Connection ~ 1000 4500
 Wire Wire Line
 	1000 4700 900  4700
@@ -106,28 +52,16 @@ F 3 "" H 900 4750 50  0001 C CNN
 	1    900  4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	950  3400 1500 3400
-Wire Wire Line
-	1500 3100 950  3100
 Text HLabel 950  3100 0    50   Output ~ 0
 MONITOR0
-Wire Wire Line
-	1500 2800 950  2800
 Text Label 950  2800 0    50   ~ 0
 TRIGGER0
 Text HLabel 950  2800 0    50   Input ~ 0
 TRIGGER0
-Wire Wire Line
-	1500 2700 950  2700
 Text Label 950  2700 0    50   ~ 0
 RESET_N
 Text HLabel 950  2700 0    50   Input ~ 0
 RESET_N
-Wire Wire Line
-	1500 3200 950  3200
-Wire Wire Line
-	1500 3300 950  3300
 Text Label 950  3400 0    50   ~ 0
 LOCK_DETECT
 Text Label 950  3300 0    50   ~ 0
@@ -136,32 +70,22 @@ Text Label 950  3200 0    50   ~ 0
 MONITOR1
 Text Label 950  3100 0    50   ~ 0
 MONITOR0
-Wire Wire Line
-	1500 2350 950  2350
 Text Label 950  2350 0    50   ~ 0
 SCK
 Text HLabel 950  2350 0    50   Input ~ 0
 SCK
-Wire Wire Line
-	1500 2250 950  2250
 Text Label 950  2250 0    50   ~ 0
 MOSI
 Text HLabel 950  2250 0    50   Input ~ 0
 MOSI
-Wire Wire Line
-	1500 2150 950  2150
 Text HLabel 950  2150 0    50   Output ~ 0
 MISO
-Wire Wire Line
-	1500 2050 950  2050
 Text Label 950  2050 0    50   ~ 0
 SS_N
 Text HLabel 950  2050 0    50   Input ~ 0
 SS_N
 Text Label 950  2150 0    50   ~ 0
 MISO
-Wire Wire Line
-	1500 4950 1150 4950
 Wire Wire Line
 	1150 4950 1150 5050
 $Comp
@@ -190,17 +114,6 @@ F 3 "" H 1150 5350 50  0001 C CNN
 	1    1150 5350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 1400 2100 1400
-Connection ~ 1900 1400
-Wire Wire Line
-	1900 1400 1800 1400
-Connection ~ 2000 1400
-Wire Wire Line
-	2000 1400 1900 1400
-Connection ~ 2100 1400
-Wire Wire Line
-	2100 1400 2000 1400
 $Comp
 L power:+3V3 #PWR03
 U 1 1 60386405
@@ -212,12 +125,6 @@ F 3 "" H 1800 1400 50  0001 C CNN
 	1    1800 1400
 	1    0    0    -1  
 $EndComp
-Connection ~ 1800 1400
-Wire Wire Line
-	2650 1400 2550 1400
-Connection ~ 2550 1400
-Wire Wire Line
-	2550 1400 2450 1400
 $Comp
 L power:+1V8 #PWR04
 U 1 1 60387D62
@@ -229,15 +136,8 @@ F 3 "" H 2450 1400 50  0001 C CNN
 	1    2450 1400
 	1    0    0    -1  
 $EndComp
-Connection ~ 2450 1400
-Wire Wire Line
-	3100 1400 3000 1400
-Connection ~ 3000 1400
-Wire Wire Line
-	3000 1400 2900 1400
 Wire Wire Line
 	2900 1400 2900 1150
-Connection ~ 2900 1400
 Text Label 2900 1150 1    50   ~ 0
 VDD_PIX
 Text Label 3250 1100 1    50   ~ 0
@@ -477,185 +377,6 @@ Wire Notes Line
 Wire Notes Line
 	500  500  500  5950
 $Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C4
-U 1 1 604EA7B5
-P 5800 2300
-F 0 "C4" H 5892 2346 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5410 2470 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5860 2570 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 5810 2370 50  0001 C CNN
-F 4 "0.1uF" H 5892 2255 50  0000 L CNN "Note"
-F 5 "0201" H 5910 2120 50  0001 C CNN "Size"
-	1    5800 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 1400 5400 1400
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C1
-U 1 1 604EB512
-P 4950 1500
-F 0 "C1" H 5042 1546 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 4560 1670 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5010 1770 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 4960 1570 50  0001 C CNN
-F 4 "0.1uF" H 5042 1455 50  0000 L CNN "Note"
-F 5 "0201" H 5060 1320 50  0001 C CNN "Size"
-	1    4950 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 4950 1400
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C2
-U 1 1 604EBB1C
-P 5400 1500
-F 0 "C2" H 5492 1546 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5010 1670 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5460 1770 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 5410 1570 50  0001 C CNN
-F 4 "0.1uF" H 5492 1455 50  0000 L CNN "Note"
-F 5 "0201" H 5510 1320 50  0001 C CNN "Size"
-	1    5400 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 5400 1400
-Wire Wire Line
-	5400 1400 5800 1400
-Wire Wire Line
-	4950 1600 5400 1600
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C3
-U 1 1 604EC155
-P 5800 1500
-F 0 "C3" H 5892 1546 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5410 1670 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5860 1770 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 5810 1570 50  0001 C CNN
-F 4 "0.1uF" H 5892 1455 50  0000 L CNN "Note"
-F 5 "0201" H 5910 1320 50  0001 C CNN "Size"
-	1    5800 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 5800 1400
-Wire Wire Line
-	5800 1400 6250 1400
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C6
-U 1 1 604EC74B
-P 6250 1500
-F 0 "C6" H 6342 1546 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5860 1670 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6310 1770 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6260 1570 50  0001 C CNN
-F 4 "0.1uF" H 6342 1455 50  0000 L CNN "Note"
-F 5 "0201" H 6360 1320 50  0001 C CNN "Size"
-	1    6250 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 6250 1400
-Wire Wire Line
-	6250 1400 6700 1400
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C9
-U 1 1 604ECC60
-P 6700 1500
-F 0 "C9" H 6792 1546 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 6310 1670 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6760 1770 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6710 1570 50  0001 C CNN
-F 4 "0.1uF" H 6792 1455 50  0000 L CNN "Note"
-F 5 "0201" H 6810 1320 50  0001 C CNN "Size"
-	1    6700 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 6700 1400
-Wire Wire Line
-	6700 1400 7200 1400
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C12
-U 1 1 604ED0F8
-P 7200 1500
-F 0 "C12" H 7292 1546 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 6810 1670 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7260 1770 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 7210 1570 50  0001 C CNN
-F 4 "0.1uF" H 7292 1455 50  0000 L CNN "Note"
-F 5 "0201" H 7310 1320 50  0001 C CNN "Size"
-	1    7200 1500
-	1    0    0    -1  
-$EndComp
-Connection ~ 5400 1600
-Wire Wire Line
-	5400 1600 5800 1600
-Connection ~ 5800 1600
-Wire Wire Line
-	5800 1600 6250 1600
-Connection ~ 6250 1600
-Wire Wire Line
-	6250 1600 6700 1600
-Connection ~ 6700 1600
-Wire Wire Line
-	6700 1600 7200 1600
-Connection ~ 7200 1600
-Wire Wire Line
-	5800 2400 6250 2400
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C7
-U 1 1 604F44F5
-P 6250 2300
-F 0 "C7" H 6342 2346 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5860 2470 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6310 2570 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6260 2370 50  0001 C CNN
-F 4 "0.1uF" H 6342 2255 50  0000 L CNN "Note"
-F 5 "0201" H 6360 2120 50  0001 C CNN "Size"
-	1    6250 2300
-	1    0    0    -1  
-$EndComp
-Connection ~ 6250 2200
-Wire Wire Line
-	6250 2200 6700 2200
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C10
-U 1 1 604F4CAD
-P 6700 2300
-F 0 "C10" H 6792 2346 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 6310 2470 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6760 2570 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6710 2370 50  0001 C CNN
-F 4 "0.1uF" H 6792 2255 50  0000 L CNN "Note"
-F 5 "0201" H 6810 2120 50  0001 C CNN "Size"
-	1    6700 2300
-	1    0    0    -1  
-$EndComp
-Connection ~ 6700 2200
-Wire Wire Line
-	6700 2200 7200 2200
-Connection ~ 6250 2400
-Wire Wire Line
-	6250 2400 6700 2400
-Connection ~ 6700 2400
-Wire Wire Line
-	6700 2400 7200 2400
-Connection ~ 7200 2400
-Wire Wire Line
-	5800 2850 6300 2850
-Wire Wire Line
-	5800 3050 6300 3050
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C13
-U 1 1 604F5246
-P 7200 2300
-F 0 "C13" H 7292 2346 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 6810 2470 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7260 2570 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 7210 2370 50  0001 C CNN
-F 4 "10uF" H 7292 2255 50  0000 L CNN "Note"
-F 5 "0201" H 7310 2120 50  0001 C CNN "Size"
-	1    7200 2300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Python480-rescue:GRM033R61A104ME15D-Capacitor C14
 U 1 1 6050232E
 P 7200 2950
@@ -668,103 +389,6 @@ F 5 "0201" H 7310 2770 50  0001 C CNN "Size"
 	1    7200 2950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C11
-U 1 1 60502D44
-P 6750 2950
-F 0 "C11" H 6842 2996 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 6360 3120 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6810 3220 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6760 3020 50  0001 C CNN
-F 4 "0.1uF" H 6842 2905 50  0000 L CNN "Note"
-F 5 "0201" H 6860 2770 50  0001 C CNN "Size"
-	1    6750 2950
-	1    0    0    -1  
-$EndComp
-Connection ~ 6750 2850
-Wire Wire Line
-	6750 2850 7200 2850
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C8
-U 1 1 60503308
-P 6300 2950
-F 0 "C8" H 6392 2996 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5910 3120 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6360 3220 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6310 3020 50  0001 C CNN
-F 4 "0.1uF" H 6392 2905 50  0000 L CNN "Note"
-F 5 "0201" H 6410 2770 50  0001 C CNN "Size"
-	1    6300 2950
-	1    0    0    -1  
-$EndComp
-Connection ~ 6300 2850
-Wire Wire Line
-	6300 2850 6750 2850
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C5
-U 1 1 60503B0B
-P 5800 2950
-F 0 "C5" H 5892 2996 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5410 3120 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5860 3220 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 5810 3020 50  0001 C CNN
-F 4 "0.1uF" H 5892 2905 50  0000 L CNN "Note"
-F 5 "0201" H 5910 2770 50  0001 C CNN "Size"
-	1    5800 2950
-	1    0    0    -1  
-$EndComp
-Connection ~ 5800 2850
-Connection ~ 6300 3050
-Wire Wire Line
-	6300 3050 6750 3050
-Connection ~ 6750 3050
-Wire Wire Line
-	6750 3050 7200 3050
-Connection ~ 7200 3050
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C17
-U 1 1 6050C6C7
-P 7200 3650
-F 0 "C17" H 7292 3696 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 6810 3820 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7260 3920 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 7210 3720 50  0001 C CNN
-F 4 "0.1uF" H 7292 3605 50  0000 L CNN "Note"
-F 5 "0201" H 7310 3470 50  0001 C CNN "Size"
-	1    7200 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 4800 5000 4800
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C16
-U 1 1 6050D4A6
-P 6000 4250
-F 0 "C16" H 6092 4296 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 5610 4420 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6060 4520 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 6010 4320 50  0001 C CNN
-F 4 "0.1uF" H 6092 4205 50  0000 L CNN "Note"
-F 5 "0201" H 6110 4070 50  0001 C CNN "Size"
-	1    6000 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C15
-U 1 1 6050DE3C
-P 5000 4900
-F 0 "C15" H 5092 4946 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 4610 5070 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5060 5170 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 5010 4970 50  0001 C CNN
-F 4 "0.1uF" H 5092 4855 50  0000 L CNN "Note"
-F 5 "0201" H 5110 4720 50  0001 C CNN "Size"
-	1    5000 4900
-	1    0    0    -1  
-$EndComp
-Connection ~ 5000 4800
-Wire Wire Line
-	5000 4800 5550 4800
 Wire Notes Line
 	8350 2200 10750 2200
 Wire Notes Line
@@ -774,14 +398,9 @@ Wire Notes Line
 Wire Notes Line
 	8350 500  8350 2200
 Wire Wire Line
-	5800 2200 6250 2200
-Wire Wire Line
 	4500 2200 5050 2200
 Text Label 4500 2200 0    50   ~ 0
 VDD_PIX_3V3
-Connection ~ 5800 2200
-Wire Wire Line
-	5650 2200 5800 2200
 $Comp
 L Python480-rescue:GRM033R61A104ME15D-Capacitor C18
 U 1 1 60510477
@@ -897,19 +516,6 @@ F 3 "" H 10300 1150 50  0001 C CNN
 	1    10300 1150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Python480-rescue:GRM033R61A104ME15D-Capacitor C19
-U 1 1 603B3C8E
-P 10300 1050
-F 0 "C19" H 10392 1096 50  0000 L CNN
-F 1 "GRM033R61A104ME15D" H 9910 1220 50  0001 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10360 1320 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 10310 1120 50  0001 C CNN
-F 4 "0.1uF" H 10392 1005 50  0000 L CNN "Note"
-F 5 "0201" H 10410 870 50  0001 C CNN "Size"
-	1    10300 1050
-	-1   0    0    1   
-$EndComp
 Text Notes 8400 700  0    100  ~ 0
 Oscillator
 $Comp
@@ -961,8 +567,6 @@ Connection ~ 8850 3150
 Wire Wire Line
 	8850 3150 9000 3150
 Wire Wire Line
-	9500 3550 8450 3550
-Wire Wire Line
 	8450 3250 8450 3150
 Wire Wire Line
 	8450 3550 8450 3450
@@ -1011,10 +615,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005415D.pdf" H 9500 3731 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9500 3550 10100 3550
-Wire Wire Line
 	10100 3550 10100 3450
-Connection ~ 9500 3550
 Connection ~ 10100 3550
 $Comp
 L power:+5V #PWR022
@@ -1066,4 +667,349 @@ NoConn ~ 1500 3650
 NoConn ~ 1500 3950
 NoConn ~ 1500 4050
 NoConn ~ 1500 4150
+Wire Wire Line
+	5800 2400 6250 2400
+Wire Wire Line
+	5800 2850 6200 2850
+Wire Wire Line
+	5800 3050 6200 3050
+Wire Wire Line
+	4700 4800 5000 4800
+Wire Wire Line
+	8450 3550 10100 3550
+Wire Wire Line
+	5650 2200 5800 2200
+Wire Wire Line
+	2450 1400 2550 1400
+Wire Wire Line
+	1500 4700 1000 4700
+Wire Wire Line
+	1500 4800 1150 4800
+Wire Wire Line
+	1500 2250 950  2250
+Wire Wire Line
+	1500 2150 950  2150
+Wire Wire Line
+	950  3400 1500 3400
+Wire Wire Line
+	1500 3300 950  3300
+Wire Wire Line
+	1500 4950 1150 4950
+Wire Wire Line
+	1500 3200 950  3200
+Wire Wire Line
+	1500 2700 950  2700
+Wire Wire Line
+	1500 2800 950  2800
+Wire Wire Line
+	1000 4600 1500 4600
+Wire Wire Line
+	1500 3100 950  3100
+Wire Wire Line
+	1500 2350 950  2350
+Wire Wire Line
+	1000 4400 1500 4400
+Wire Wire Line
+	1900 5650 2000 5650
+Wire Wire Line
+	1500 2050 950  2050
+Wire Wire Line
+	1000 4500 1500 4500
+$Comp
+L Python480_rescue:NOIP1SN0480A-Image_Sensor U?
+U 1 1 60B51EEA
+P 2450 3400
+F 0 "U?" H 2525 5581 50  0000 C CNN
+F 1 "NOIP1SN0480A-Image_Sensor" H 2525 5490 50  0000 C CNN
+F 2 ".Package_BGA:BGA88CP50_8X11_493X613X75B25" H 2350 5800 50  0001 C CNN
+F 3 "" H 2200 5450 50  0001 C CNN
+	1    2450 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1400 3100 1400
+Wire Wire Line
+	2100 1400 2200 1400
+$Comp
+L Device:C_Small C?
+U 1 1 60B6EE3F
+P 4950 1500
+AR Path="/607CBDDC/60B6EE3F" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B6EE3F" Ref="C?"  Part="1" 
+F 0 "C?" H 5042 1546 50  0000 L CNN
+F 1 "0.1uF" H 5042 1455 50  0000 L CNN
+F 2 "" H 4950 1500 50  0001 C CNN
+F 3 "~" H 4950 1500 50  0001 C CNN
+	1    4950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B7A580
+P 7200 1500
+AR Path="/607CBDDC/60B7A580" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B7A580" Ref="C?"  Part="1" 
+F 0 "C?" H 7292 1546 50  0000 L CNN
+F 1 "0.1uF" H 7292 1455 50  0000 L CNN
+F 2 "" H 7200 1500 50  0001 C CNN
+F 3 "~" H 7200 1500 50  0001 C CNN
+	1    7200 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B7D0F1
+P 5800 2300
+AR Path="/607CBDDC/60B7D0F1" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B7D0F1" Ref="C?"  Part="1" 
+F 0 "C?" H 5892 2346 50  0000 L CNN
+F 1 "0.1uF" H 5892 2255 50  0000 L CNN
+F 2 "" H 5800 2300 50  0001 C CNN
+F 3 "~" H 5800 2300 50  0001 C CNN
+	1    5800 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B7F5F3
+P 6250 2300
+AR Path="/607CBDDC/60B7F5F3" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B7F5F3" Ref="C?"  Part="1" 
+F 0 "C?" H 6342 2346 50  0000 L CNN
+F 1 "0.1uF" H 6342 2255 50  0000 L CNN
+F 2 "" H 6250 2300 50  0001 C CNN
+F 3 "~" H 6250 2300 50  0001 C CNN
+	1    6250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B81ACB
+P 6700 2300
+AR Path="/607CBDDC/60B81ACB" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B81ACB" Ref="C?"  Part="1" 
+F 0 "C?" H 6792 2346 50  0000 L CNN
+F 1 "0.1uF" H 6792 2255 50  0000 L CNN
+F 2 "" H 6700 2300 50  0001 C CNN
+F 3 "~" H 6700 2300 50  0001 C CNN
+	1    6700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B8776E
+P 5800 2950
+AR Path="/607CBDDC/60B8776E" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B8776E" Ref="C?"  Part="1" 
+F 0 "C?" H 5892 2996 50  0000 L CNN
+F 1 "0.1uF" H 5892 2905 50  0000 L CNN
+F 2 "" H 5800 2950 50  0001 C CNN
+F 3 "~" H 5800 2950 50  0001 C CNN
+	1    5800 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B89CAD
+P 6200 2950
+AR Path="/607CBDDC/60B89CAD" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B89CAD" Ref="C?"  Part="1" 
+F 0 "C?" H 6292 2996 50  0000 L CNN
+F 1 "0.1uF" H 6292 2905 50  0000 L CNN
+F 2 "" H 6200 2950 50  0001 C CNN
+F 3 "~" H 6200 2950 50  0001 C CNN
+	1    6200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B8C1BA
+P 6650 2950
+AR Path="/607CBDDC/60B8C1BA" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B8C1BA" Ref="C?"  Part="1" 
+F 0 "C?" H 6742 2996 50  0000 L CNN
+F 1 "0.1uF" H 6742 2905 50  0000 L CNN
+F 2 "" H 6650 2950 50  0001 C CNN
+F 3 "~" H 6650 2950 50  0001 C CNN
+	1    6650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B8EFDA
+P 7200 3650
+AR Path="/607CBDDC/60B8EFDA" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B8EFDA" Ref="C?"  Part="1" 
+F 0 "C?" H 7292 3696 50  0000 L CNN
+F 1 "0.1uF" H 7292 3605 50  0000 L CNN
+F 2 "" H 7200 3650 50  0001 C CNN
+F 3 "~" H 7200 3650 50  0001 C CNN
+	1    7200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B925E7
+P 6000 4250
+AR Path="/607CBDDC/60B925E7" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B925E7" Ref="C?"  Part="1" 
+F 0 "C?" H 6092 4296 50  0000 L CNN
+F 1 "0.1uF" H 6092 4205 50  0000 L CNN
+F 2 "" H 6000 4250 50  0001 C CNN
+F 3 "~" H 6000 4250 50  0001 C CNN
+	1    6000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B952B8
+P 5000 4900
+AR Path="/607CBDDC/60B952B8" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B952B8" Ref="C?"  Part="1" 
+F 0 "C?" H 5092 4946 50  0000 L CNN
+F 1 "0.1uF" H 5092 4855 50  0000 L CNN
+F 2 "" H 5000 4900 50  0001 C CNN
+F 3 "~" H 5000 4900 50  0001 C CNN
+	1    5000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B9B4D6
+P 10300 1050
+AR Path="/607CBDDC/60B9B4D6" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B9B4D6" Ref="C?"  Part="1" 
+F 0 "C?" H 10392 1096 50  0000 L CNN
+F 1 "0.1uF" H 10392 1005 50  0000 L CNN
+F 2 "" H 10300 1050 50  0001 C CNN
+F 3 "~" H 10300 1050 50  0001 C CNN
+	1    10300 1050
+	1    0    0    -1  
+$EndComp
+Connection ~ 4950 1400
+Connection ~ 7200 1600
+$Comp
+L Device:C_Small C?
+U 1 1 60B780EC
+P 6750 1500
+AR Path="/607CBDDC/60B780EC" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B780EC" Ref="C?"  Part="1" 
+F 0 "C?" H 6842 1546 50  0000 L CNN
+F 1 "0.1uF" H 6842 1455 50  0000 L CNN
+F 2 "" H 6750 1500 50  0001 C CNN
+F 3 "~" H 6750 1500 50  0001 C CNN
+	1    6750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B75C7D
+P 6350 1500
+AR Path="/607CBDDC/60B75C7D" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B75C7D" Ref="C?"  Part="1" 
+F 0 "C?" H 6442 1546 50  0000 L CNN
+F 1 "0.1uF" H 6442 1455 50  0000 L CNN
+F 2 "" H 6350 1500 50  0001 C CNN
+F 3 "~" H 6350 1500 50  0001 C CNN
+	1    6350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60B73817
+P 5900 1500
+AR Path="/607CBDDC/60B73817" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B73817" Ref="C?"  Part="1" 
+F 0 "C?" H 5992 1546 50  0000 L CNN
+F 1 "0.1uF" H 5992 1455 50  0000 L CNN
+F 2 "" H 5900 1500 50  0001 C CNN
+F 3 "~" H 5900 1500 50  0001 C CNN
+	1    5900 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1600 5450 1600
+Wire Wire Line
+	4950 1400 5450 1400
+$Comp
+L Device:C_Small C?
+U 1 1 60B71361
+P 5450 1500
+AR Path="/607CBDDC/60B71361" Ref="C?"  Part="1" 
+AR Path="/607CBC7A/60B71361" Ref="C?"  Part="1" 
+F 0 "C?" H 5542 1546 50  0000 L CNN
+F 1 "0.1uF" H 5542 1455 50  0000 L CNN
+F 2 "" H 5450 1500 50  0001 C CNN
+F 3 "~" H 5450 1500 50  0001 C CNN
+	1    5450 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 5450 1400
+Wire Wire Line
+	5450 1400 5900 1400
+Connection ~ 5450 1600
+Wire Wire Line
+	5450 1600 5900 1600
+Connection ~ 5900 1400
+Wire Wire Line
+	5900 1400 6350 1400
+Connection ~ 5900 1600
+Wire Wire Line
+	5900 1600 6350 1600
+Connection ~ 6350 1400
+Wire Wire Line
+	6350 1400 6750 1400
+Connection ~ 6350 1600
+Wire Wire Line
+	6350 1600 6750 1600
+Connection ~ 6750 1400
+Wire Wire Line
+	6750 1400 7200 1400
+Connection ~ 6750 1600
+Wire Wire Line
+	6750 1600 7200 1600
+$Comp
+L Python480-rescue:GRM033R61A104ME15D-Capacitor C13
+U 1 1 604F5246
+P 7200 2300
+F 0 "C13" H 7292 2346 50  0000 L CNN
+F 1 "GRM033R61A104ME15D" H 6810 2470 50  0001 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7260 2570 50  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM033R61A104ME15-01.pdf" H 7210 2370 50  0001 C CNN
+F 4 "10uF" H 7292 2255 50  0000 L CNN "Note"
+F 5 "0201" H 7310 2120 50  0001 C CNN "Size"
+	1    7200 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5800 2200
+Wire Wire Line
+	5800 2200 6250 2200
+Connection ~ 6250 2200
+Wire Wire Line
+	6250 2200 6700 2200
+Connection ~ 6250 2400
+Wire Wire Line
+	6250 2400 6700 2400
+Connection ~ 6700 2200
+Wire Wire Line
+	6700 2200 7200 2200
+Connection ~ 6700 2400
+Wire Wire Line
+	6700 2400 7200 2400
+Connection ~ 5800 2850
+Connection ~ 6200 2850
+Wire Wire Line
+	6200 2850 6650 2850
+Connection ~ 6200 3050
+Wire Wire Line
+	6200 3050 6650 3050
+Connection ~ 6650 2850
+Wire Wire Line
+	6650 2850 7200 2850
+Connection ~ 6650 3050
+Wire Wire Line
+	6650 3050 7200 3050
+Connection ~ 5000 4800
+Wire Wire Line
+	5000 4800 5550 4800
 $EndSCHEMATC

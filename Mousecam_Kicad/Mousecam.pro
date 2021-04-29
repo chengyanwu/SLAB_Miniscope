@@ -10,7 +10,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=
+LibDir={ENV_VAR}
 [eeschema/libraries]
 [schematic_editor]
 version=1
