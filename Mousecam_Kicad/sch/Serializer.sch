@@ -187,7 +187,7 @@ U 1 1 602E686F
 P 3550 5600
 F 0 "R7" V 3345 5600 50  0000 C CNN
 F 1 "1K" V 3436 5600 50  0000 C CNN
-F 2 "" H 3550 5600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3550 5600 50  0001 C CNN
 F 3 "~" H 3550 5600 50  0001 C CNN
 	1    3550 5600
 	0    1    1    0   
@@ -363,61 +363,16 @@ F 3 "~" H 5600 3150 50  0001 C CNN
 	1    5600 3150
 	1    0    0    -1  
 $EndComp
-Text Notes 5600 4850 0    80   ~ 0
-Breakout pads\n
-$Comp
-L power:GND #PWR042
-U 1 1 60016AE8
-P 6100 5450
-F 0 "#PWR042" H 6100 5200 50  0001 C CNN
-F 1 "GND" V 6105 5322 50  0000 R CNN
-F 2 "" H 6100 5450 50  0001 C CNN
-F 3 "" H 6100 5450 50  0001 C CNN
-	1    6100 5450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR043
-U 1 1 6001D50C
-P 6100 5550
-F 0 "#PWR043" H 6100 5400 50  0001 C CNN
-F 1 "+5V" V 6115 5678 50  0000 L CNN
-F 2 "" H 6100 5550 50  0001 C CNN
-F 3 "" H 6100 5550 50  0001 C CNN
-	1    6100 5550
-	0    1    1    0   
-$EndComp
-Text Label 6150 5650 2    39   ~ 0
-CLK_OUT
-Text Label 6100 5250 2    39   ~ 0
-DIN10
-Text Label 6100 5350 2    39   ~ 0
-DIN11
-Text HLabel 6100 5250 2    39   Input ~ 0
-D10
-Text HLabel 6100 5350 2    39   Input ~ 0
-D11
 $Comp
 L Device:R_Small_US R6
 U 1 1 601021F6
 P 3050 5600
 F 0 "R6" V 2845 5600 50  0000 C CNN
 F 1 "1K" V 2936 5600 50  0000 C CNN
-F 2 "" H 3050 5600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3050 5600 50  0001 C CNN
 F 3 "~" H 3050 5600 50  0001 C CNN
 	1    3050 5600
 	0    1    1    0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J2
-U 1 1 5FFF727F
-P 5700 5450
-F 0 "J2" H 5700 5850 50  0000 C CNN
-F 1 "DNL" H 5700 5750 50  0000 C CNN
-F 2 "" H 5700 5450 50  0001 C CNN
-F 3 "~" H 5700 5450 50  0001 C CNN
-	1    5700 5450
-	-1   0    0    -1  
 $EndComp
 Text Label 1250 3300 0    39   ~ 0
 I2C_SDA
@@ -449,24 +404,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 5600 3300 5600
 Connection ~ 3300 5600
-Wire Wire Line
-	5900 5250 6100 5250
-Wire Wire Line
-	5900 5350 6100 5350
-Wire Wire Line
-	5900 5650 6150 5650
-Wire Wire Line
-	5900 5550 6100 5550
-Wire Wire Line
-	6100 5450 5900 5450
-Wire Notes Line
-	6550 4700 5550 4700
-Wire Notes Line
-	6550 5900 6550 4700
-Wire Notes Line
-	5550 5900 6550 5900
-Wire Notes Line
-	5550 4700 5550 5900
 Wire Wire Line
 	1100 5600 1100 5500
 Wire Wire Line
@@ -740,7 +677,7 @@ U 1 1 60A286F1
 P 4750 1950
 F 0 "R8" V 4554 1950 50  0000 C CNN
 F 1 "49.9" V 4645 1950 50  0000 C CNN
-F 2 "" H 4750 1950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4750 1950 50  0001 C CNN
 F 3 "~" H 4750 1950 50  0001 C CNN
 	1    4750 1950
 	0    1    1    0   
@@ -919,20 +856,18 @@ U 1 1 608BF2E4
 P 2700 2550
 F 0 "U7" H 2699 1394 60  0000 C CNN
 F 1 "DS90UB953ATRHBRQ1" H 2699 1288 60  0000 C CNN
-F 2 "RHB0032P_TEX" H 2700 4490 60  0001 C CNN
+F 2 "" H 2700 4490 60  0001 C CNN
 F 3 "" H 2700 3150 60  0000 C CNN
 	1    2700 2550
 	1    0    0    -1  
 $EndComp
 $Comp
-L Serializer_rescue:U_FL-R-SMT_10_-dk_Coaxial-Connectors-RF J?
-U 1 1 6090C202
+L Serializer_cache:dk_Coaxial-Connectors-RF_U_FL-R-SMT_10_ J2
+U 1 1 608D1DD3
 P 2250 5300
-AR Path="/6090C202" Ref="J?"  Part="1" 
-AR Path="/607CBDDC/6090C202" Ref="J?"  Part="1" 
-F 0 "J?" H 2328 5525 50  0000 C CNN
-F 1 "U_FL-R-SMT_10_-dk_Coaxial-Connectors-RF" H 2328 5434 50  0000 C CNN
-F 2 "digikey-footprints:Coax_Conn_U.FL" H 2450 5500 60  0001 L CNN
+F 0 "J2" H 2328 5525 50  0000 C CNN
+F 1 "dk_Coaxial-Connectors-RF_U_FL-R-SMT_10_" H 2328 5434 50  0000 C CNN
+F 2 "" H 2450 5500 60  0001 L CNN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Hirose%20PDFs/UFL%20Series.pdf" H 2450 5600 60  0001 L CNN
 F 4 "H9161CT-ND" H 2450 5700 60  0001 L CNN "Digi-Key_PN"
 F 5 "U.FL-R-SMT(10)" H 2450 5800 60  0001 L CNN "MPN"
