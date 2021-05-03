@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name TLV7103318DSER)(type Legacy)(uri ${KIPRJMOD}/lib/ldo/TLV7103318DSER.lib)(options "")(descr ""))
+  (lib (name DS90UB953ATRHBRQ1)(type Legacy)(uri ${KIPRJMOD}/lib/serializer/DS90UB953ATRHBRQ1.lib)(options "")(descr ""))
+)
