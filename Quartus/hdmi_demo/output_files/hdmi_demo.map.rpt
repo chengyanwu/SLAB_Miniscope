@@ -1,0 +1,1117 @@
+Analysis & Synthesis report for hdmi_demo
+Thu Apr 29 16:28:52 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_ddio_out:ddio_out
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |hdmi_demo
+ 15. Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker
+ 16. Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|audio_clock_regeneration_packet:audio_clock_regeneration_packet
+ 17. Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|audio_sample_packet:audio_sample_packet
+ 18. Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|auxiliary_video_information_info_frame:auxiliary_video_information_info_frame
+ 19. Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|source_product_description_info_frame:source_product_description_info_frame
+ 20. Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|audio_info_frame:audio_info_frame
+ 21. Parameter Settings for User Entity Instance: tmds_channel:tmds_gen[0].tmds_channel
+ 22. Parameter Settings for User Entity Instance: tmds_channel:tmds_gen[1].tmds_channel
+ 23. Parameter Settings for User Entity Instance: tmds_channel:tmds_gen[2].tmds_channel
+ 24. Parameter Settings for User Entity Instance: serializer:serializer
+ 25. Parameter Settings for User Entity Instance: serializer:serializer|altlvds_tx:ALTLVDS_TX_component
+ 26. Port Connectivity Checks: "packet_picker:true_hdmi_output.packet_picker|audio_sample_packet:audio_sample_packet"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 29 16:28:52 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; hdmi_demo                                   ;
+; Top-level Entity Name              ; hdmi_demo                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 1,626                                       ;
+;     Total combinational functions  ; 1,347                                       ;
+;     Dedicated logic registers      ; 696                                         ;
+; Total registers                    ; 704                                         ;
+; Total pins                         ; 124                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; hdmi_demo          ; hdmi_demo          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ; Library ;
++-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; rtl/tmds_channel.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/tmds_channel.sv                           ;         ;
+; rtl/source_product_description_info_frame.sv  ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/source_product_description_info_frame.sv  ;         ;
+; rtl/serializer.sv                             ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/serializer.sv                             ;         ;
+; rtl/packet_picker.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv                          ;         ;
+; rtl/packet_assembler.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_assembler.sv                       ;         ;
+; rtl/auxiliary_video_information_info_frame.sv ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/auxiliary_video_information_info_frame.sv ;         ;
+; rtl/audio_sample_packet.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/audio_sample_packet.sv                    ;         ;
+; rtl/audio_info_frame.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/audio_info_frame.sv                       ;         ;
+; rtl/audio_clock_regeneration_packet.sv        ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/audio_clock_regeneration_packet.sv        ;         ;
+; rtl/hdmi_demo.sv                              ; yes             ; User SystemVerilog HDL File  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv                              ;         ;
+; altlvds_tx.tdf                                ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altlvds_tx.tdf                    ;         ;
+; aglobal201.inc                                ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;         ;
+; stratix_pll.inc                               ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc                   ;         ;
+; stratix_lvds_transmitter.inc                  ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_lvds_transmitter.inc      ;         ;
+; stratixii_lvds_transmitter.inc                ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratixii_lvds_transmitter.inc    ;         ;
+; stratixgx_lvds_transmitter.inc                ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratixgx_lvds_transmitter.inc    ;         ;
+; stratixgx_pll.inc                             ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratixgx_pll.inc                 ;         ;
+; stratixii_clkctrl.inc                         ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratixii_clkctrl.inc             ;         ;
+; altddio_out.inc                               ; yes             ; Megafunction                 ; /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altddio_out.inc                   ;         ;
+; db/altlvds_tx_inst_lvds_tx.v                  ; yes             ; Auto-Generated Megafunction  ; /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v                  ;         ;
++-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 1,626           ;
+;                                             ;                 ;
+; Total combinational functions               ; 1347            ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 796             ;
+;     -- 3 input functions                    ; 372             ;
+;     -- <=2 input functions                  ; 179             ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 1236            ;
+;     -- arithmetic mode                      ; 111             ;
+;                                             ;                 ;
+; Total registers                             ; 704             ;
+;     -- Dedicated logic registers            ; 696             ;
+;     -- I/O registers                        ; 16              ;
+;                                             ;                 ;
+; I/O pins                                    ; 124             ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; clk_pixel~input ;
+; Maximum fan-out                             ; 599             ;
+; Total fan-out                               ; 6818            ;
+; Average fan-out                             ; 2.97            ;
++---------------------------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                           ;
++-------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+; Compilation Hierarchy Node                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                           ; Entity Name                     ; Library Name ;
++-------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+; |hdmi_demo                                                              ; 1347 (122)          ; 696 (67)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 124  ; 0            ; 0          ; |hdmi_demo                                                                                                                                    ; hdmi_demo                       ; work         ;
+;    |packet_assembler:true_hdmi_output.packet_assembler|                 ; 272 (272)           ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler                                                                                 ; packet_assembler                ; work         ;
+;    |packet_picker:true_hdmi_output.packet_picker|                       ; 533 (433)           ; 486 (438)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker                                                                                       ; packet_picker                   ; work         ;
+;       |audio_clock_regeneration_packet:audio_clock_regeneration_packet| ; 53 (53)             ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|audio_clock_regeneration_packet:audio_clock_regeneration_packet                       ; audio_clock_regeneration_packet ; work         ;
+;       |audio_sample_packet:audio_sample_packet|                         ; 47 (47)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|audio_sample_packet:audio_sample_packet                                               ; audio_sample_packet             ; work         ;
+;    |serializer:serializer|                                              ; 46 (0)              ; 56 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer                                                                                                              ; serializer                      ; work         ;
+;       |altlvds_tx:ALTLVDS_TX_component|                                 ; 46 (0)              ; 56 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component                                                                              ; altlvds_tx                      ; work         ;
+;          |altlvds_tx_inst_lvds_tx:auto_generated|                       ; 46 (6)              ; 56 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated                                       ; altlvds_tx_inst_lvds_tx         ; work         ;
+;             |altlvds_tx_inst_cntr:cntr2|                                ; 8 (8)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_cntr:cntr2            ; altlvds_tx_inst_cntr            ; work         ;
+;             |altlvds_tx_inst_ddio_out:ddio_out|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_ddio_out:ddio_out     ; altlvds_tx_inst_ddio_out        ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg12|                     ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg12 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg13|                     ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg13 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg14|                     ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg14 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg15|                     ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg15 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg16|                     ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg16 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg17|                     ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg17 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg18|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18 ; altlvds_tx_inst_shift_reg       ; work         ;
+;             |altlvds_tx_inst_shift_reg:shift_reg19|                     ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19 ; altlvds_tx_inst_shift_reg       ; work         ;
+;    |tmds_channel:tmds_gen[0].tmds_channel|                              ; 140 (140)           ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|tmds_channel:tmds_gen[0].tmds_channel                                                                                              ; tmds_channel                    ; work         ;
+;    |tmds_channel:tmds_gen[1].tmds_channel|                              ; 117 (117)           ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|tmds_channel:tmds_gen[1].tmds_channel                                                                                              ; tmds_channel                    ; work         ;
+;    |tmds_channel:tmds_gen[2].tmds_channel|                              ; 117 (117)           ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |hdmi_demo|tmds_channel:tmds_gen[2].tmds_channel                                                                                              ; tmds_channel                    ; work         ;
++-------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                                                                            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                   ; Reason for Removal                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; control_data[3,5]                                                                                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[4] ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18|shift_reg[4] ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|frame_counter[0]                                                                                   ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|packet_type[3..6]                                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|frame_counter[1]                                                                                   ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_clock_regeneration_packet:audio_clock_regeneration_packet|cycle_time_stamp[18,19]            ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[3] ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18|shift_reg[3] ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[2] ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_present_packet[0..3]                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][0][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][1][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][2][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][0][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][0]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][1]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][2]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][3]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][4]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][5]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][6]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[1][3][1][7]                                                               ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][0]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][1]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][2]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][3]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][4]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][5]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][6]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][7]                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18|shift_reg[2] ; Merged with serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[1] ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[0] ; Merged with serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18|shift_reg[1] ;
+; data_island_data[0]                                                                                                                             ; Merged with control_data[0]                                                                                                                                 ;
+; data_island_data[1]                                                                                                                             ; Merged with control_data[1]                                                                                                                                 ;
+; tmds_channel:tmds_gen[2].tmds_channel|acc[0]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; tmds_channel:tmds_gen[1].tmds_channel|acc[0]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; tmds_channel:tmds_gen[0].tmds_channel|acc[0]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                      ;
+; packet_picker:true_hdmi_output.packet_picker|audio_clock_regeneration_packet:audio_clock_regeneration_packet|clk_audio_counter[0]               ; Merged with packet_picker:true_hdmi_output.packet_picker|audio_sample_word_transfer_control                                                                 ;
+; Total Number of Removed Registers = 219                                                                                                         ;                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                                                                    ;
++-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                   ; Reason for Removal        ; Registers Removed due to This Register                                                                                                           ;
++-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[4] ; Stuck at GND              ; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[3], ;
+;                                                                                                                                                 ; due to stuck port data_in ; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg19|shift_reg[2]  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][1][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][1][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][2][0][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[2][0][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][1][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][1][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][3][0][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[3][0][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18|shift_reg[4] ; Stuck at GND              ; serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg18|shift_reg[3]  ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][0][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][0][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][0][1][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[0][1][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][6]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][6]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][0][7]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][0][7]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][0]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][0]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][1]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][1]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][2]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][2]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][3]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][3]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][4]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][4]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
+; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_buffer[0][1][1][5]                                                               ; Stuck at GND              ; packet_picker:true_hdmi_output.packet_picker|audio_sample_word_packet[1][1][5]                                                                   ;
+;                                                                                                                                                 ; due to stuck port data_in ;                                                                                                                                                  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 696   ;
+; Number of registers using Synchronous Clear  ; 61    ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 510   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; mode[0]                                ; 47      ;
+; true_hdmi_output.video_guard           ; 2       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |hdmi_demo|cx[1]~reg0                                                                        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|frame_counter[5]                     ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |hdmi_demo|cy[8]~reg0                                                                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|packet_type[7]                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|frame_counter[6]                     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[2].tmds_channel|tmds[9]                                     ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|parity[3][5]                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|parity[4][7]                   ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[1].tmds_channel|tmds[5]                                     ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[2].tmds_channel|tmds[7]                                     ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[0].tmds_channel|tmds[2]                                     ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[1].tmds_channel|tmds[6]                                     ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[2].tmds_channel|tmds[2]                                     ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |hdmi_demo|data_island_data[10]                                                              ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |hdmi_demo|tmds_channel:tmds_gen[0].tmds_channel|tmds[5]                                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|Mux231                               ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |hdmi_demo|tmds_channel:tmds_gen[0].tmds_channel|acc_add[2]                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |hdmi_demo|tmds_channel:tmds_gen[1].tmds_channel|acc_add[2]                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |hdmi_demo|tmds_channel:tmds_gen[2].tmds_channel|acc_add[2]                                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|Mux224                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|Mux11                          ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |hdmi_demo|packet_picker:true_hdmi_output.packet_picker|audio_sample_word_transfer_mux[1][2] ;
+; 32:1               ; 3 bits    ; 63 LEs        ; 6 LEs                ; 57 LEs                 ; No         ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|Mux2                           ;
+; 46:1               ; 3 bits    ; 90 LEs        ; 15 LEs               ; 75 LEs                 ; No         ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|Mux6                           ;
+; 60:1               ; 2 bits    ; 80 LEs        ; 30 LEs               ; 50 LEs                 ; No         ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|Mux7                           ;
+; 120:1              ; 8 bits    ; 640 LEs       ; 280 LEs              ; 360 LEs                ; No         ; |hdmi_demo|packet_assembler:true_hdmi_output.packet_assembler|Mux4                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_ddio_out:ddio_out ;
++-----------------------------+---------+------+--------------------------------------------------------------------------------------------------------+
+; Assignment                  ; Value   ; From ; To                                                                                                     ;
++-----------------------------+---------+------+--------------------------------------------------------------------------------------------------------+
+; SYNCHRONIZER_IDENTIFICATION ; OFF     ; -    ; -                                                                                                      ;
+; ADV_NETLIST_OPT_ALLOWED     ; DEFAULT ; -    ; -                                                                                                      ;
++-----------------------------+---------+------+--------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |hdmi_demo ;
++---------------------------+----------+------------------------------------+
+; Parameter Name            ; Value    ; Type                               ;
++---------------------------+----------+------------------------------------+
+; VIDEO_ID_CODE             ; 1        ; Signed Integer                     ;
+; BIT_WIDTH                 ; 10       ; Signed Integer                     ;
+; BIT_HEIGHT                ; 10       ; Signed Integer                     ;
+; DVI_OUTPUT                ; 0        ; Unsigned Binary                    ;
+; VIDEO_REFRESH_RATE        ; 59.94    ; Signed Float                       ;
+; AUDIO_RATE                ; 44100    ; Signed Integer                     ;
+; AUDIO_BIT_WIDTH           ; 16       ; Signed Integer                     ;
+; VENDOR_NAME               ; Unknown  ; String                             ;
+; PRODUCT_DESCRIPTION       ; FPGA     ; String                             ;
+; SOURCE_DEVICE_INFORMATION ; 00000000 ; Unsigned Binary                    ;
++---------------------------+----------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker ;
++---------------------------+------------------+--------------------------------------------+
+; Parameter Name            ; Value            ; Type                                       ;
++---------------------------+------------------+--------------------------------------------+
+; VIDEO_ID_CODE             ; 1                ; Signed Integer                             ;
+; VIDEO_RATE                ; 25174825.1748252 ; Signed Float                               ;
+; AUDIO_BIT_WIDTH           ; 16               ; Signed Integer                             ;
+; AUDIO_RATE                ; 44100            ; Signed Integer                             ;
+; VENDOR_NAME               ; Unknown          ; String                                     ;
+; PRODUCT_DESCRIPTION       ; FPGA             ; String                                     ;
+; SOURCE_DEVICE_INFORMATION ; 00000000         ; Unsigned Binary                            ;
++---------------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|audio_clock_regeneration_packet:audio_clock_regeneration_packet ;
++----------------+------------------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                                                                  ;
++----------------+------------------+-----------------------------------------------------------------------------------------------------------------------+
+; VIDEO_RATE     ; 25174825.1748252 ; Signed Float                                                                                                          ;
+; AUDIO_RATE     ; 44100            ; Signed Integer                                                                                                        ;
++----------------+------------------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|audio_sample_packet:audio_sample_packet ;
++-----------------------------+----------+------------------------------------------------------------------------------------------+
+; Parameter Name              ; Value    ; Type                                                                                     ;
++-----------------------------+----------+------------------------------------------------------------------------------------------+
+; GRADE                       ; 0        ; Unsigned Binary                                                                          ;
+; SAMPLE_WORD_TYPE            ; 0        ; Unsigned Binary                                                                          ;
+; COPYRIGHT_NOT_ASSERTED      ; 1        ; Unsigned Binary                                                                          ;
+; PRE_EMPHASIS                ; 000      ; Unsigned Binary                                                                          ;
+; MODE                        ; 00       ; Unsigned Binary                                                                          ;
+; CATEGORY_CODE               ; 00000000 ; Unsigned Binary                                                                          ;
+; SOURCE_NUMBER               ; 0000     ; Unsigned Binary                                                                          ;
+; SAMPLING_FREQUENCY          ; 0000     ; Unsigned Binary                                                                          ;
+; CLOCK_ACCURACY              ; 00       ; Unsigned Binary                                                                          ;
+; WORD_LENGTH                 ; 0010     ; Unsigned Binary                                                                          ;
+; ORIGINAL_SAMPLING_FREQUENCY ; 0000     ; Unsigned Binary                                                                          ;
+; LAYOUT                      ; 0        ; Unsigned Binary                                                                          ;
++-----------------------------+----------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|auxiliary_video_information_info_frame:auxiliary_video_information_info_frame ;
++-----------------------------+---------+---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name              ; Value   ; Type                                                                                                                            ;
++-----------------------------+---------+---------------------------------------------------------------------------------------------------------------------------------+
+; VIDEO_FORMAT                ; 00      ; Unsigned Binary                                                                                                                 ;
+; ACTIVE_FORMAT_INFO_PRESENT  ; 0       ; Unsigned Binary                                                                                                                 ;
+; BAR_INFO                    ; 00      ; Unsigned Binary                                                                                                                 ;
+; SCAN_INFO                   ; 00      ; Unsigned Binary                                                                                                                 ;
+; COLORIMETRY                 ; 00      ; Unsigned Binary                                                                                                                 ;
+; PICTURE_ASPECT_RATIO        ; 00      ; Unsigned Binary                                                                                                                 ;
+; ACTIVE_FORMAT_ASPECT_RATIO  ; 1000    ; Unsigned Binary                                                                                                                 ;
+; IT_CONTENT                  ; 0       ; Unsigned Binary                                                                                                                 ;
+; EXTENDED_COLORIMETRY        ; 000     ; Unsigned Binary                                                                                                                 ;
+; RGB_QUANTIZATION_RANGE      ; 00      ; Unsigned Binary                                                                                                                 ;
+; NON_UNIFORM_PICTURE_SCALING ; 00      ; Unsigned Binary                                                                                                                 ;
+; VIDEO_ID_CODE               ; 0000001 ; Signed Binary                                                                                                                   ;
+; YCC_QUANTIZATION_RANGE      ; 00      ; Unsigned Binary                                                                                                                 ;
+; CONTENT_TYPE                ; 00      ; Unsigned Binary                                                                                                                 ;
+; PIXEL_REPETITION            ; 0000    ; Unsigned Binary                                                                                                                 ;
++-----------------------------+---------+---------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|source_product_description_info_frame:source_product_description_info_frame ;
++---------------------------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name            ; Value    ; Type                                                                                                                           ;
++---------------------------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; VENDOR_NAME               ; Unknown  ; String                                                                                                                         ;
+; PRODUCT_DESCRIPTION       ; FPGA     ; String                                                                                                                         ;
+; SOURCE_DEVICE_INFORMATION ; 00000000 ; Unsigned Binary                                                                                                                ;
++---------------------------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: packet_picker:true_hdmi_output.packet_picker|audio_info_frame:audio_info_frame ;
++--------------------------------------+----------+---------------------------------------------------------------------------+
+; Parameter Name                       ; Value    ; Type                                                                      ;
++--------------------------------------+----------+---------------------------------------------------------------------------+
+; AUDIO_CHANNEL_COUNT                  ; 001      ; Unsigned Binary                                                           ;
+; CHANNEL_ALLOCATION                   ; 00000000 ; Unsigned Binary                                                           ;
+; DOWN_MIX_INHIBITED                   ; 0        ; Unsigned Binary                                                           ;
+; LEVEL_SHIFT_VALUE                    ; 0000     ; Unsigned Binary                                                           ;
+; LOW_FREQUENCY_EFFECTS_PLAYBACK_LEVEL ; 00       ; Unsigned Binary                                                           ;
++--------------------------------------+----------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tmds_channel:tmds_gen[0].tmds_channel ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; CN             ; 0     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tmds_channel:tmds_gen[1].tmds_channel ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; CN             ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tmds_channel:tmds_gen[2].tmds_channel ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; CN             ; 2     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: serializer:serializer ;
++----------------+------------------+--------------------------------+
+; Parameter Name ; Value            ; Type                           ;
++----------------+------------------+--------------------------------+
+; NUM_CHANNELS   ; 3                ; Signed Integer                 ;
+; VIDEO_RATE     ; 25174825.1748252 ; Signed Float                   ;
++----------------+------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: serializer:serializer|altlvds_tx:ALTLVDS_TX_component ;
++-----------------------------+-------------------------+--------------------------------------------+
+; Parameter Name              ; Value                   ; Type                                       ;
++-----------------------------+-------------------------+--------------------------------------------+
+; AUTO_CARRY_CHAINS           ; ON                      ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS        ; OFF                     ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS         ; ON                      ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS      ; OFF                     ; IGNORE_CASCADE                             ;
+; NUMBER_OF_CHANNELS          ; 4                       ; Signed Integer                             ;
+; DESERIALIZATION_FACTOR      ; 10                      ; Signed Integer                             ;
+; REGISTERED_INPUT            ; OFF                     ; Untyped                                    ;
+; MULTI_CLOCK                 ; OFF                     ; Untyped                                    ;
+; INCLOCK_PERIOD              ; 0                       ; Signed Integer                             ;
+; OUTCLOCK_DIVIDE_BY          ; 1                       ; Untyped                                    ;
+; INCLOCK_BOOST               ; 0                       ; Signed Integer                             ;
+; CENTER_ALIGN_MSB            ; UNUSED                  ; Untyped                                    ;
+; INTENDED_DEVICE_FAMILY      ; Stratix                 ; Untyped                                    ;
+; DEVICE_FAMILY               ; MAX 10                  ; Untyped                                    ;
+; OUTPUT_DATA_RATE            ; 251748252               ; Signed Integer                             ;
+; INCLOCK_DATA_ALIGNMENT      ; EDGE_ALIGNED            ; Untyped                                    ;
+; OUTCLOCK_ALIGNMENT          ; UNUSED                  ; Untyped                                    ;
+; INCLOCK_PHASE_SHIFT         ; 0                       ; Signed Integer                             ;
+; OUTCLOCK_PHASE_SHIFT        ; 0                       ; Untyped                                    ;
+; COMMON_RX_TX_PLL            ; OFF                     ; Untyped                                    ;
+; OUTCLOCK_RESOURCE           ; AUTO                    ; Untyped                                    ;
+; USE_EXTERNAL_PLL            ; ON                      ; Untyped                                    ;
+; PREEMPHASIS_SETTING         ; 0                       ; Signed Integer                             ;
+; VOD_SETTING                 ; 0                       ; Signed Integer                             ;
+; DIFFERENTIAL_DRIVE          ; 0                       ; Signed Integer                             ;
+; CORECLOCK_DIVIDE_BY         ; 1                       ; Signed Integer                             ;
+; ENABLE_CLK_LATENCY          ; OFF                     ; Untyped                                    ;
+; OUTCLOCK_DUTY_CYCLE         ; 50                      ; Untyped                                    ;
+; PLL_BANDWIDTH_TYPE          ; AUTO                    ; Untyped                                    ;
+; IMPLEMENT_IN_LES            ; OFF                     ; Untyped                                    ;
+; PLL_SELF_RESET_ON_LOSS_LOCK ; OFF                     ; Untyped                                    ;
+; CBXI_PARAMETER              ; altlvds_tx_inst_lvds_tx ; Untyped                                    ;
++-----------------------------+-------------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "packet_picker:true_hdmi_output.packet_picker|audio_sample_packet:audio_sample_packet" ;
++---------------+-------+----------+-------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                       ;
++---------------+-------+----------+-------------------------------------------------------------------------------+
+; valid_bit     ; Input ; Info     ; Stuck at GND                                                                  ;
+; user_data_bit ; Input ; Info     ; Stuck at GND                                                                  ;
++---------------+-------+----------+-------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 124                         ;
+; cycloneiii_ff         ; 696                         ;
+;     CLR               ; 37                          ;
+;     ENA               ; 476                         ;
+;     ENA SCLR          ; 16                          ;
+;     ENA SCLR SLD      ; 2                           ;
+;     ENA SLD           ; 16                          ;
+;     SCLR              ; 43                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 104                         ;
+; cycloneiii_lcell_comb ; 1349                        ;
+;     arith             ; 111                         ;
+;         2 data inputs ; 61                          ;
+;         3 data inputs ; 50                          ;
+;     normal            ; 1238                        ;
+;         0 data inputs ; 12                          ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 93                          ;
+;         3 data inputs ; 322                         ;
+;         4 data inputs ; 796                         ;
+; fiftyfivenm_ddio_out  ; 4                           ;
+;                       ;                             ;
+; Max LUT depth         ; 15.30                       ;
+; Average LUT depth     ; 5.54                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Apr 29 16:28:44 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hdmi_demo -c hdmi_demo
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/tmds_channel.sv
+    Info (12023): Found entity 1: tmds_channel File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/tmds_channel.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/source_product_description_info_frame.sv
+    Info (12023): Found entity 1: source_product_description_info_frame File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/source_product_description_info_frame.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/serializer.sv
+    Info (12023): Found entity 1: serializer File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/serializer.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/packet_picker.sv
+    Info (12023): Found entity 1: packet_picker File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/packet_assembler.sv
+    Info (12023): Found entity 1: packet_assembler File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_assembler.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/auxiliary_video_information_info_frame.sv
+    Info (12023): Found entity 1: auxiliary_video_information_info_frame File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/auxiliary_video_information_info_frame.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/audio_sample_packet.sv
+    Info (12023): Found entity 1: audio_sample_packet File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/audio_sample_packet.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/audio_info_frame.sv
+    Info (12023): Found entity 1: audio_info_frame File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/audio_info_frame.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/audio_clock_regeneration_packet.sv
+    Info (12023): Found entity 1: audio_clock_regeneration_packet File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/audio_clock_regeneration_packet.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/hdmi_demo.sv
+    Info (12023): Found entity 1: hdmi_demo File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file ipCores/hdmi_pll.v
+    Info (12023): Found entity 1: hdmi_pll File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/ipCores/hdmi_pll.v Line: 41
+Info (12127): Elaborating entity "hdmi_demo" for the top level hierarchy
+Info (12128): Elaborating entity "packet_picker" for hierarchy "packet_picker:true_hdmi_output.packet_picker" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 277
+Warning (10030): Net "headers[255..133]" at packet_picker.sv(28) has no driver or initial value, using a default initial value '0' File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 28
+Warning (10030): Net "headers[129..3]" at packet_picker.sv(28) has no driver or initial value, using a default initial value '0' File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 28
+Warning (10030): Net "subs[255..133]" at packet_picker.sv(29) has no driver or initial value, using a default initial value '0' File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 29
+Warning (10030): Net "subs[129..3]" at packet_picker.sv(29) has no driver or initial value, using a default initial value '0' File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 29
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "subs" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "audio_sample_word_buffer" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "audio_sample_word_packet" into its bus
+Info (12128): Elaborating entity "audio_clock_regeneration_packet" for hierarchy "packet_picker:true_hdmi_output.packet_picker|audio_clock_regeneration_packet:audio_clock_regeneration_packet" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 50
+Info (12128): Elaborating entity "audio_sample_packet" for hierarchy "packet_picker:true_hdmi_output.packet_picker|audio_sample_packet:audio_sample_packet" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 130
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "audio_sample_word" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "audio_sample_word" into its bus
+Info (12128): Elaborating entity "auxiliary_video_information_info_frame" for hierarchy "packet_picker:true_hdmi_output.packet_picker|auxiliary_video_information_info_frame:auxiliary_video_information_info_frame" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 133
+Info (12128): Elaborating entity "source_product_description_info_frame" for hierarchy "packet_picker:true_hdmi_output.packet_picker|source_product_description_info_frame:source_product_description_info_frame" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 136
+Info (12128): Elaborating entity "audio_info_frame" for hierarchy "packet_picker:true_hdmi_output.packet_picker|audio_info_frame:audio_info_frame" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/packet_picker.sv Line: 139
+Info (12128): Elaborating entity "packet_assembler" for hierarchy "packet_assembler:true_hdmi_output.packet_assembler" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 279
+Info (12128): Elaborating entity "tmds_channel" for hierarchy "tmds_channel:tmds_gen[0].tmds_channel" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 330
+Info (12128): Elaborating entity "tmds_channel" for hierarchy "tmds_channel:tmds_gen[1].tmds_channel" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 330
+Info (12128): Elaborating entity "tmds_channel" for hierarchy "tmds_channel:tmds_gen[2].tmds_channel" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 330
+Info (12128): Elaborating entity "serializer" for hierarchy "serializer:serializer" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 334
+Info (12128): Elaborating entity "altlvds_tx" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/serializer.sv Line: 152
+Info (12130): Elaborated megafunction instantiation "serializer:serializer|altlvds_tx:ALTLVDS_TX_component" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/serializer.sv Line: 152
+Info (12133): Instantiated megafunction "serializer:serializer|altlvds_tx:ALTLVDS_TX_component" with the following parameter: File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/serializer.sv Line: 152
+    Info (12134): Parameter "center_align_msb" = "UNUSED"
+    Info (12134): Parameter "common_rx_tx_pll" = "OFF"
+    Info (12134): Parameter "coreclock_divide_by" = "1"
+    Info (12134): Parameter "deserialization_factor" = "10"
+    Info (12134): Parameter "differential_drive" = "0"
+    Info (12134): Parameter "enable_clock_pin_mode" = "UNUSED"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "inclock_boost" = "0"
+    Info (12134): Parameter "inclock_data_alignment" = "EDGE_ALIGNED"
+    Info (12134): Parameter "inclock_period" = "0"
+    Info (12134): Parameter "inclock_phase_shift" = "0"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=altlvds_tx_inst"
+    Info (12134): Parameter "lpm_type" = "altlvds_tx"
+    Info (12134): Parameter "multi_clock" = "OFF"
+    Info (12134): Parameter "number_of_channels" = "4"
+    Info (12134): Parameter "output_data_rate" = "251748252"
+    Info (12134): Parameter "pll_compensation_mode" = "AUTO"
+    Info (12134): Parameter "pll_self_reset_on_loss_lock" = "OFF"
+    Info (12134): Parameter "preemphasis_setting" = "0"
+    Info (12134): Parameter "registered_input" = "OFF"
+    Info (12134): Parameter "use_external_pll" = "ON"
+    Info (12134): Parameter "use_no_phase_shift" = "ON"
+    Info (12134): Parameter "vod_setting" = "0"
+    Info (12134): Parameter "clk_src_is_pll" = "off"
+Info (12021): Found 6 design units, including 6 entities, in source file db/altlvds_tx_inst_lvds_tx.v
+    Info (12023): Found entity 1: altlvds_tx_inst_ddio_out File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 35
+    Info (12023): Found entity 2: altlvds_tx_inst_cmpr File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 206
+    Info (12023): Found entity 3: altlvds_tx_inst_cmpr1 File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 248
+    Info (12023): Found entity 4: altlvds_tx_inst_cntr File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 282
+    Info (12023): Found entity 5: altlvds_tx_inst_shift_reg File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 438
+    Info (12023): Found entity 6: altlvds_tx_inst_lvds_tx File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 484
+Info (12128): Elaborating entity "altlvds_tx_inst_lvds_tx" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated" File: /home/slab/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altlvds_tx.tdf Line: 263
+Info (12128): Elaborating entity "altlvds_tx_inst_ddio_out" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_ddio_out:ddio_out" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 539
+Info (12128): Elaborating entity "altlvds_tx_inst_cmpr" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_cmpr:cmpr10" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 593
+Info (12128): Elaborating entity "altlvds_tx_inst_cntr" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_cntr:cntr2" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 604
+Info (12128): Elaborating entity "altlvds_tx_inst_cmpr1" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_cntr:cntr2|altlvds_tx_inst_cmpr1:cmpr20" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 409
+Info (12128): Elaborating entity "altlvds_tx_inst_shift_reg" for hierarchy "serializer:serializer|altlvds_tx:ALTLVDS_TX_component|altlvds_tx_inst_lvds_tx:auto_generated|altlvds_tx_inst_shift_reg:shift_reg12" File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/db/altlvds_tx_inst_lvds_tx.v Line: 612
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "frame_width[0]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[1]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[2]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[3]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[4]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[5]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[6]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[7]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[8]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_width[9]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 62
+    Warning (13410): Pin "frame_height[0]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[1]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[2]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[3]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[4]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[5]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[6]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[7]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[8]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "frame_height[9]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 63
+    Warning (13410): Pin "screen_width[0]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[1]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[2]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[3]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[4]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[5]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[6]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[7]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[8]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_width[9]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 64
+    Warning (13410): Pin "screen_height[0]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[1]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[2]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[3]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[4]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[5]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[6]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[7]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[8]" is stuck at VCC File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+    Warning (13410): Pin "screen_height[9]" is stuck at GND File: /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/rtl/hdmi_demo.sv Line: 66
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/output_files/hdmi_demo.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1805 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 60 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 1677 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 508 megabytes
+    Info: Processing ended: Thu Apr 29 16:28:52 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/output_files/hdmi_demo.map.smsg.
+
+
