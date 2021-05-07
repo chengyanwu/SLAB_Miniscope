@@ -1,5 +1,5 @@
 Fitter report for hdmi_demo
-Thu Apr 29 16:29:06 2021
+Thu May  6 17:19:36 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 29 16:29:06 2021       ;
+; Fitter Status                      ; Successful - Thu May  6 17:19:36 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; hdmi_demo                                   ;
 ; Top-level Entity Name              ; hdmi_demo                                   ;
@@ -154,17 +154,17 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.24        ;
+; Average used               ; 1.25        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.7%      ;
-;     Processor 3            ;   3.6%      ;
-;     Processor 4            ;   3.5%      ;
-;     Processor 5            ;   3.4%      ;
-;     Processor 6            ;   3.4%      ;
-;     Processor 7            ;   3.4%      ;
+;     Processor 2            ;   3.8%      ;
+;     Processor 3            ;   3.7%      ;
+;     Processor 4            ;   3.6%      ;
+;     Processor 5            ;   3.5%      ;
+;     Processor 6            ;   3.5%      ;
+;     Processor 7            ;   3.5%      ;
 ;     Processor 8            ;   3.4%      ;
 +----------------------------+-------------+
 
@@ -2187,20 +2187,20 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.57 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.56 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file /home/slab/Desktop/SLAB_Mousecam/Quartus/hdmi_demo/output_files/hdmi_demo.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1397 megabytes
-    Info: Processing ended: Thu Apr 29 16:29:06 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 1399 megabytes
+    Info: Processing ended: Thu May  6 17:19:36 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+
