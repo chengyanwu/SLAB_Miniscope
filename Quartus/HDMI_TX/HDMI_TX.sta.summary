@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.362
+TNS   : -21.217
+
+Type  : Slow 1200mV 85C Model Setup 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : -1.868
+TNS   : -81.222
+
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK2_50'
+Slack : -1.554
+TNS   : -1.554
+
+Type  : Slow 1200mV 85C Model Setup 'AUDIO_IF:u_AVG|lrclk'
+Slack : -1.071
+TNS   : -6.010
+
+Type  : Slow 1200mV 85C Model Setup 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : 0.315
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'AUDIO_IF:u_AVG|lrclk'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK2_50'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : -1.222
+TNS   : -65.988
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AUDIO_IF:u_AVG|lrclk'
+Slack : -1.222
+TNS   : -7.332
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.147
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK2_50'
+Slack : 9.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.852
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 325.274
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.371
+TNS   : -17.165
+
+Type  : Slow 1200mV 0C Model Setup 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : -1.637
+TNS   : -69.562
+
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK2_50'
+Slack : -1.334
+TNS   : -1.334
+
+Type  : Slow 1200mV 0C Model Setup 'AUDIO_IF:u_AVG|lrclk'
+Slack : -0.904
+TNS   : -5.058
+
+Type  : Slow 1200mV 0C Model Setup 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.569
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'AUDIO_IF:u_AVG|lrclk'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK2_50'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : -1.222
+TNS   : -65.988
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AUDIO_IF:u_AVG|lrclk'
+Slack : -1.222
+TNS   : -7.332
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.095
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK2_50'
+Slack : 9.586
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.875
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 325.264
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.031
+TNS   : -7.958
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK2_50'
+Slack : -0.601
+TNS   : -0.601
+
+Type  : Fast 1200mV 0C Model Setup 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : -0.362
+TNS   : -10.361
+
+Type  : Fast 1200mV 0C Model Setup 'AUDIO_IF:u_AVG|lrclk'
+Slack : 0.047
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 5.122
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'AUDIO_IF:u_AVG|lrclk'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK2_50'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'I2C_HDMI_Config:u_I2C_HDMI_Config|mI2C_CTRL_CLK'
+Slack : -1.000
+TNS   : -54.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AUDIO_IF:u_AVG|lrclk'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u_vpg|u_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.177
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK2_50'
+Slack : 9.329
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.668
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u_sys_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 325.269
+TNS   : 0.000
+
+------------------------------------------------------------
