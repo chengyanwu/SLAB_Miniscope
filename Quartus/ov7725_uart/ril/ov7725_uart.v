@@ -41,12 +41,14 @@ module ov7725_uart(
     output       [1:0]    sdram_ba    ,  //SDRAM Bank地址
     output       [1:0]    sdram_dqm   ,  //SDRAM 数据掩码
     output       [12:0]   sdram_addr  ,  //SDRAM 地址
-    inout        [15:0]   sdram_data  ,  //SDRAM 数据    
+    inout        [15:0]   sdram_data    //SDRAM 数据    
     //VGA接口                          
     // output                vga_hs      ,  //行同步信号
     // output                vga_vs      ,  //场同步信号
     // output        [15:0]  vga_rgb        //红绿蓝三原色输出 
-    output                uart_tx
+    // output                uart_tx
+	 // output u_hdmi_tx
+	 
     );
 
 //parameter define
@@ -76,6 +78,17 @@ wire                  rd_en           ;  //sdram_ctrl模块读使能
 wire   [15:0]         rd_data         ;  //sdram_ctrl模块读数据
 wire                  sdram_init_done ;  //SDRAM初始化完成
 wire                  sys_init_done   ;  //系统初始化完成(sdram初始化+摄像头初始化)
+
+
+//For HDMI
+wire 						 clk1_50;
+wire						 clk2_50;
+wire	[1:0]				 key;
+wire 						 i2c_scl;
+wire						 i2c_sda;
+wire 						 lrclk;
+wire 						 sclk;
+wire						 tx_int;
 
 //*****************************************************
 //**                    main code
@@ -208,15 +221,29 @@ sdram_top u_sdram_top(
 //     .pixel_xpos         (), 
 //     .pixel_ypos         ()
 //     ); 
-tx u_tx (
-    .clk100M(clk_100m),
-    .reset_n(rst_n),
-    .data_in(rd_data),
-    .data_valid(1'd1),
-    .data_ready(rd_en),
-    .uart_tx(uart_tx),
-    .clk_uart9600(clk_uart9600)
 
+//tx u_tx (
+//    .clk100M(clk_100m),
+//    .reset_n(rst_n),
+//    .data_in(rd_data),
+//    .data_valid(1'd1),
+//    .data_ready(rd_en),
+//    .uart_tx(uart_tx),
+//    .clk_uart9600(clk_uart9600)
+//
+//);
+
+HDMI_TX u_hdmi_tx (
+	.KEY(key),
+	.MAX10_CLK1_50(clk1_50),
+	.MAX10_CLK2_50(clk2_50),
+	.HDMI_I2C_SCL(i2c_scl),
+	.HDMI_I2C_SDA(i2c_sda),
+	.HDMI_LRCLK(lrclk),
+	// .HDMI_MCLK(),
+	.HDMI_SCLK(hdmi_sclk),
+	.HDMI_TX_INT(tx_int)
+	
 );
 
 endmodule 

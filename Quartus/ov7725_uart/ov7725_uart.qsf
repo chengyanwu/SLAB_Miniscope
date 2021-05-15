@@ -59,6 +59,15 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE ril/vpg_source/vpg.v
+set_global_assignment -name SOURCE_FILE ril/vpg_source/vpg.h
+set_global_assignment -name VERILOG_FILE ril/vpg_source/vga_generator.v
+set_global_assignment -name VERILOG_FILE ril/hdml/vpg.v
+set_global_assignment -name VERILOG_FILE ril/hdml/vga_generator.v
+set_global_assignment -name VERILOG_FILE ril/hdml/I2C_HDMI_Config.v
+set_global_assignment -name VERILOG_FILE ril/hdml/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE ril/hdml/HDMI_TX.v
+set_global_assignment -name VERILOG_FILE ril/hdml/AUDIO_IF.v
 set_global_assignment -name VERILOG_FILE ril/clk_div.v
 set_global_assignment -name VERILOG_FILE ril/tx.v
 set_global_assignment -name VERILOG_FILE ril/sdram/sdram_cmd.v
